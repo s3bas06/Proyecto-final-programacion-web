@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width:1920px) {
+    /**********************************
+
+    Estilos del Header
+
+    **********************************/
+
+    .header {
+        background-color: #002438;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw;
+    }
+    .header-options{
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        height: auto;
+        gap: 1em;
+    }
+
+    .header-option{
+        font-size: 1rem;
+        background-color: #38A1D9;
+        max-width: 100%;
+        padding: 0.5em 2em;
+        border-radius: 0.5rem;
+        margin: 0;
+    }
+
+    .user-icon{
+        display: inline-block;
+        background-color: #38A1D9;
+        padding: 0.2em;
+        border-radius: 0.5em;
+    }
+
+    /**********************************
+    
+    Estilos del contenido principal
+
+    **********************************/
+
+    main{
+        background-image: linear-gradient(124deg,#445259 0%, #4A8BAE 60%, #38A1D9 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}   
+
+@media (max-width:320px) {
+
+}
+
+@media (max-width:768px) {
+    
+}
