@@ -1,0 +1,136 @@
+body {
+    background-color: #002438;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Inter' , sans-serif;
+}
+
+.login-container {
+    background-color: #EEEEEE;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,.25);
+    width: 570px;
+    height: 400px;
+    text-align: center;
+}
+.login-title {
+    color: #002438;
+    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group input {
+    width: 97%;
+    color: black;
+    background-color: #d9d9d9;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #EEEEEE;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+}
+
+.checkbox-group {
+    display: flex;
+    color: #242E33;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #38A1D9;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #38A1D9;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.btn-primary:hover {
+    background-color: #445259;
+}
+.link {
+    color: #4E7184;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+.link-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.link:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) { 
+    
+    .login-title { 
+        font-size: 24px; 
+    } 
+    .login-container { 
+        padding: 1rem; 
+        width: 100%; /* Asegura que el formulario ocupe todo el ancho disponible */ 
+        max-width: 100%; /* El formulario ahora ocupa todo el ancho de la pantalla */ 
+        height: auto; 
+    } 
+    .input-group input { 
+        width: 100%; /* Hacer que los inputs se adapten a pantallas pequeñas */ 
+        padding: 8px; /* Reducir el padding */ 
+    } 
+    .checkbox-group { 
+        font-size: 14px; /* Reducir el tamaño de la fuente en móviles */ 
+    } 
+    .btn-primary { 
+        padding: 12px; /* Aumentar ligeramente el padding del botón */ 
+    } 
+    .link-container { 
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 20px; 
+    } 
+    .link { 
+        margin-top: 10px; 
+    } 
+
+} 
+
+@media (max-width: 768px) { 
+    
+    .login-title { 
+        font-size: 26px; /* Ajustar el tamaño del título */ 
+    } 
+    .login-container { 
+        width: 90%; /* Hacer que el contenedor sea más pequeño en tablets */ 
+        max-width: 500px; 
+    } 
+    .input-group input { 
+        width: 100%; /* Asegurarse que los inputs sean 100% de ancho */ 
+    } 
+    .btn-primary { 
+        padding: 14px; /* Ajustar el padding de los botones */ 
+    } 
+    .link-container { 
+        flex-direction: column; 
+    } 
+    
+    .link{
+        margin-top: 10px;
+    }
+}
