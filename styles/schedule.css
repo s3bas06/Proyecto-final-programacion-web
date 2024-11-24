@@ -4,6 +4,14 @@
     font-family: 'Lato', sans-serif;
 }
 
+h1 {
+    color: white;
+}
+
+p{
+    color: white;
+}
+
 @media (max-width:1920px) {
     /**********************************
 
@@ -12,8 +20,6 @@
     **********************************/
 
     .header {
-        position: sticky;
-        top: 0;
         background-color: #002438;
         display: flex;
         justify-content: space-between;
@@ -45,128 +51,101 @@
     }
 
     /**********************************
-    
-    Estilos del contenido principal
 
+    Estilos del contenido principal
+    
     **********************************/
 
     main{
-        background-image: linear-gradient(124deg,#445259 0%, #4A8BAE 60%, #38A1D9 100%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .main-information{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8rem 3.5rem 8rem 3.5rem;
-    }
-
-    .information {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem 3rem 1rem 3rem;
-        min-height: 100%;
-        max-width: 40%;
-        color: white;
-    }
-
-    .main-information-img {
-        background-image: white;
-        min-height: 100%;
-    }
-
-    .main-information-img img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .information-title h1{
-        margin-bottom: 1rem;
-        font-size: 3rem;
-    }
-
-    .information-body p {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .information-button{
-        text-align: center;
-    }
-
-    .information-button button {
-        font-size: 1.25rem;
-        background-color: #002438;
-        width: 75%;
-        padding: 0.5em 2em;
-        border-radius: 0.5rem;
-        margin: 0;
-        color: white;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    /**********************************
-    
-    Estilos de seleccion del cine
-
-    **********************************/
-
-    .cine-selection{
-        padding: 1.5rem 0 2rem 0;
-        background-color: #002438;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-
-    .cine-title{
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #38A1D9;
-    }
-
-    #cine-selector {
-        width: 25%;
-        font-size: 1.25rem;
-        padding: 0.5em;
-        border-radius: 0.5rem;
-        margin: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    /**********************************
-    
-    Cartelera del cine
-
-    **********************************/
-
-    .movie-listings {
         background-color: #4A8BAE;
         display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        gap: 2.5rem;
-        padding: 2rem 2rem 2rem 8%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 13.67vh 0;
+        gap: 2rem;
     }
-    
 
-    .movie-title{
-        font-weight: bold;
+    .main-sinopsis {
+        color: white;
+    }
+
+    .main-sinopsis h2{
+        padding: 1rem 0;
+        font-size: 1.5rem;
+    }
+
+    .movie-poster{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-name{
         text-align: center;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
     }
 
-        /**********************************
+    #comboBox{
+        width: 15rem;
+    }
+
+    .main-content{
+        max-width: 50%;
+    }
+
+    .main-function{
+        padding: 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between
+    }
+
+    #interface{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .day {
+        background-color: #002438;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        padding: 0.75rem;
+        border-radius: 0.5em;
+    }
+
+    .first-combobox{
+        margin-bottom: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    label{
+        background-color: white;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.5em;
+    }
+
+    .ticket{
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .confirm-button{
+        font-size: 1.25rem;
+        background-color: #FFA500;
+        border-color: #FFA500;
+        width: 30%;
+        padding: 0.5em 2em;
+        border-radius: 0.5rem;
+        margin: 0 0 0 35%;
+        color: white;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    /**********************************
 
     Estilo del footer
     
@@ -198,6 +177,8 @@
         font-size: 1.5rem;
     }
 
+
+    
 }   
 
 @media (max-width:320px) {
