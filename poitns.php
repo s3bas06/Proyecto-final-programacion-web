@@ -10,16 +10,11 @@
     <link rel="stylesheet" href="styles/points.css">
 </head>
 <body>
-    <div class="header">
-        <div class="header-options">
-            <button class="header-option">Peliculas</button>
-            <button class="header-option">Alimentos</button>
-            <button class="header-option">Promos</button>
-        </div>
-        <div class="user-icon">
-            <img src="assets/user-icon.png" alt="">
-        </div>
-    </div>
+    
+    <?php
+        require 'header.php';
+    ?>
+
     <div class="information">
         <div class="container-menu">
             <div class="menu-options">
@@ -46,17 +41,9 @@
         <a href="index.html"><p>volver</p></a>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="goback"><a href="index.html">Regresar</a></div>
-            <div class="social-networks">
-                <a href="">Facebook</a>
-                <a href="">Instagram</a>
-                <a href="">X</a>
-            </div>
-            <div class="contact"><a href="mailto:">Contacto</a></div>    
-        </div>
-    </footer>
+    <?php
+        require 'footer.php';
+    ?>
 
 </body>
 </html>

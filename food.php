@@ -3,47 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cine totalus</title>
-    <link rel="stylesheet" href="styles/food-index.css">
+    <title>Resumen de la pelicula</title>
+    <link rel="stylesheet" href="styles/food.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https: //fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <div class="header-options">
-            <button class="header-option">Peliculas</button>
-            <button class="header-option">Alimentos</button>
-            <button class="header-option">Promos</button>
-        </div>
-        <div class="user-icon">
-            <img src="assets/user-icon.png" alt="">
-        </div>
-    </div>
 
+    <?php
+        require 'header.php';
+    ?>
+    
     <main>
-        <div class="main-information">
-            <div class="information">
-                <div class="information-title"><h1>Promociones de alimentos.</h1></div>
-                <div class="information-body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum, ante vel efficitur vulputate. Sit ametdolor dolor ipsum amet</p></div>
-                <div class="information-button"><button>Más información</button></div>
-            </div>
-
-            <div class="main-information-img">
-                <img src="assets/main-imagen-index.png">
-            </div>
-        </div>
-
-        <div class="display-option"></div>
-    </main>
-
-    <div class="cine-selection">
-        <label class="cine-title">Selecciona alimentos y añadelos a tu carrito</label>
-    </div>
-
-    <section class="food-start">
         <div class="food">
+            <h1 class="food-title">Seleccion de alimentos</h1>
             <div class="food-section">
                 <h1>Combos</h1>
                 <div class="food-menu">
@@ -192,7 +167,7 @@
         
             <button class="pay-button">Pagar</button>
           </div>
-    </section>
+    </main>
 
     <section class="modal">
         <div class="modal-container">
@@ -261,17 +236,9 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="goback"><a href="index.html">Regresar</a></div>
-            <div class="social-networks">
-                <a href="">Facebook</a>
-                <a href="">Instagram</a>
-                <a href="">X</a>
-            </div>
-            <div class="contact"><a href="mailto:">Contacto</a></div>    
-        </div>
-    </footer>
+    <?php
+        require 'footer.php';
+    ?>
 
     <script src="js/food.js"></script>
 </body>
