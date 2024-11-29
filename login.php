@@ -9,11 +9,12 @@
 <body>
     <div class="login-container">
         <h2 class="login-title">Inicio de Sesión</h2>
+      <form action="login-action.php" method="POST">
         <div class="input-group">
-          <input type="email" placeholder="Email">
+          <input type="email" placeholder="Email" name="email">
         </div>
         <div class="input-group">
-          <input type="password" placeholder="Contraseña">
+          <input type="password" placeholder="Contraseña" name="password">
         </div>
         <div class="checkbox-group">
           <input type="checkbox" id="show-password">
@@ -22,8 +23,9 @@
         <a href="index.html"><button class="btn-primary"><b>Acceder</b></button></a>
         <div class="link-container">
             <a href="#" class="link">Olvidaste tu contraseña?</a>
-            <a href="register.html" class="link">Aún no tienes cuenta?</a>
+            <a href="register-form.php" class="link">Aún no tienes cuenta?</a>
         </div>
+      </form>
       </div>
 </body>
 </html>
