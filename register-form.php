@@ -9,7 +9,7 @@
 <body>
     <div class="register-container">
       <h2 class="register-title">Registro</h2>
-      <form action="register-action.php" method="POST">
+      <form action="php_codes/register-action.php" method="POST">
         <div class="input-group">
           <input type="email" placeholder="Email" name="email">
         </div>

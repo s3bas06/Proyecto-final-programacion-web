@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h2 class="login-title">Inicio de Sesión</h2>
-      <form action="login-action.php" method="POST">
+      <form action="php_codes/login-action.php" method="POST">
         <div class="input-group">
           <input type="email" placeholder="Email" name="email">
         </div>
