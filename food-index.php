@@ -260,7 +260,7 @@
     ?>
 
     <footer class="show-cart">
-        <input type="button" value="Mostrar carrito">
+        <input type="button" value="Proceder al pago">
     </footer>
 
 
