@@ -16,45 +16,6 @@ body {
 }
 
 /**********************************
-Estilos del Header
-**********************************/
-
-.header {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #002438;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vw;
-    z-index: 10; 
-}
-
-.header-options {
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    gap: 1em;
-}
-
-.header-option {
-    font-size: 1rem;
-    background-color: #38A1D9;
-    padding: 0.5em 2em;
-    border-radius: 0.5rem;
-    margin: 0;
-}
-
-.user-icon {
-    display: inline-block;
-    background-color: #38A1D9;
-    padding: 0.2em;
-    border-radius: 0.5em;
-}
-
-/**********************************
 Contenedor principal
 **********************************/
 
@@ -215,43 +176,4 @@ Estilo de carrito
 
 .pay-button:hover {
     background-color: #ffa500;
-}
-
-
-
-/**********************************
-Estilo del footer
-**********************************/
-
-footer {
-    position: fixed; 
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #002438;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    z-index: 10; 
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-}
-
-.social-networks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 5.8rem;
-}
-
-footer a {
-    text-decoration: none;
-    font-size: 1.5rem;
 }

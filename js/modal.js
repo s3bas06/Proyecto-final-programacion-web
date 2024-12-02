@@ -12,5 +12,7 @@ openModal.addEventListener('click', (e)=>{
 closeModal.addEventListener('click', (e) =>{
     e.preventDefault();
     modal.classList.remove('modal--show');
-    showCart.style.opacity = "1";
+    if(window.innerWidth < 768){
+        showCart.style.opacity = "1";
+    }
 });

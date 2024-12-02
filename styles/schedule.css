@@ -13,43 +13,6 @@ p{
 }
     /**********************************
 
-    Estilos del Header
-    
-    **********************************/
-
-    .header {
-        background-color: #002438;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1vw;
-    }
-    .header-options{
-        display: flex;
-        box-sizing: border-box;
-        align-items: center;
-        height: auto;
-        gap: 1em;
-    }
-
-    .header-option{
-        font-size: 1rem;
-        background-color: #38A1D9;
-        max-width: 100%;
-        padding: 0.5em 2em;
-        border-radius: 0.5rem;
-        margin: 0;
-    }
-
-    .user-icon{
-        display: inline-block;
-        background-color: #38A1D9;
-        padding: 0.2em;
-        border-radius: 0.5em;
-    }
-
-    /**********************************
-
     Estilos del contenido principal
     
     **********************************/
@@ -142,37 +105,6 @@ p{
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    }
-    /**********************************
-
-    Estilo del footer
-    
-    **********************************/
-
-    footer{
-        background-color: #002438;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .footer-content{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-    }
-    .social-networks{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-left: 5.8rem;
-    }
-    
-    footer a {
-        text-decoration: none;
-        font-size: 1.5rem;
     }
 
 @media (max-width:320px) {
