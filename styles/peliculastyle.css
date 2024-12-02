@@ -11,8 +11,6 @@ h1 {
 p{
     color: white;
 }
-
-@media (max-width:1920px) {
     /**********************************
 
     Estilos del Header
@@ -192,10 +190,6 @@ p{
         text-decoration: none;
         font-size: 1.5rem;
     }
-
-
-    
-}   
 
 @media (max-width:320px) {
 

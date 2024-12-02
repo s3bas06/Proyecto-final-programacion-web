@@ -3,8 +3,6 @@
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
-
-@media (max-width:1920px) {
     /**********************************
 
     Estilos del Header
@@ -461,8 +459,6 @@
         text-decoration: none;
         font-size: 1.5rem;
     }
-
-}   
 
 @media (max-width:320px) {
 

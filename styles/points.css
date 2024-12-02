@@ -16,7 +16,6 @@ h1 {
 p{
     color: white;
 }
-@media (max-width:1920px) {
 
     /**********************************
     
@@ -193,6 +192,3 @@ p{
         text-decoration: none;
         font-size: 1.5rem;
     }
-
-
-}
