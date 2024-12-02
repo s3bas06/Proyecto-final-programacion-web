@@ -18,7 +18,7 @@
             <button class="header-option">Promos</button>
         </div>
         <div class="user-icon">
-            <img src="assets/user-icon.png" alt="">
+            <a href="profile.php"><img src="assets/user-icon.png" alt=""></a>
         </div>
     </div>
 </body>

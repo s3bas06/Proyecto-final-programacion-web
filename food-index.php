@@ -259,6 +259,11 @@
         require 'footer.php';
     ?>
 
-    <script src="js/food.js"></script>
+    <footer class="show-cart">
+        <input type="button" value="Mostrar carrito">
+    </footer>
+
+
+    <script src="js/modal.js"></script>
 </body>
 </html>

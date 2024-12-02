@@ -240,6 +240,10 @@
         require 'footer.php';
     ?>
 
-    <script src="js/food.js"></script>
+    <footer class="show-cart">
+        <input class="show-cart-button" type="button" value="Proceder al pago">
+    </footer>
+
+    <script src="js/modal.js"></script>
 </body>
 </html>

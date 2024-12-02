@@ -3,163 +3,111 @@
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
-    /*****************dd*****************
-    
-    Estilos del contenido principal
 
+h1 {
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+    /**********************************
+
+    Estilos del Header
+    
     **********************************/
 
-    main{
-        background-image: linear-gradient(124deg,#445259 0%, #4A8BAE 60%, #38A1D9 100%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .main-information{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8rem 3.5rem 8rem 3.5rem;
-    }
-
-    .information {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem 3rem 1rem 3rem;
-        min-height: 100%;
-        max-width: 40%;
-        color: white;
-    }
-
-    .main-information-img {
-        background-image: white;
-        min-height: 100%;
-    }
-
-    .main-information-img img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .information-title h1{
-        margin-bottom: 1rem;
-        font-size: 3rem;
-    }
-
-    .information-body p {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .information-button{
-        text-align: center;
-    }
-
-    .information-button button {
-        font-size: 1.25rem;
+    .header {
         background-color: #002438;
-        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw;
+    }
+    .header-options{
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        height: auto;
+        gap: 1em;
+    }
+
+    .header-option{
+        font-size: 1rem;
+        background-color: #38A1D9;
+        max-width: 100%;
         padding: 0.5em 2em;
         border-radius: 0.5rem;
         margin: 0;
-        color: white;
+    }
 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+    .user-icon{
+        display: inline-block;
+        background-color: #38A1D9;
+        padding: 0.2em;
+        border-radius: 0.5em;
     }
 
     /**********************************
-    
-    Estilos de seleccion del cine
 
+    Estilos del contenido principal
+    
     **********************************/
 
-    .cine-selection{
-        padding: 1.5rem 0 2rem 0;
-        background-color: #002438;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-
-    .cine-title{
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #38A1D9;
-    }
-
-    #cine-selector {
-        width: 25%;
-        font-size: 1.25rem;
-        padding: 0.5em;
-        border-radius: 0.5rem;
-        margin: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    /**********************************
-    
-    Estilos de la seccion de comida
-
-    **********************************/
-    .food-start{
-        padding: 1.5rem 0;
+    main{
         background-color: #4A8BAE;
         display: flex;
         flex-direction: row;
         align-items:flex-start;
         justify-content: center;
+        padding: 1.3vh 0;
         gap: 10vw;
-        
     }
-
-    .food{
-        max-width: 60%;
-    }
-
-    .food-title{
-        font-size: 3rem;
-        color: #002438;
-        text-align: center;
-    }
-
-    .food-menu{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 2.5rem;
-    }
-
-    .food-option{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    
-    .combo-btn{
-        background-color: #002438;
-        font-size: 1rem;
-        color:#ffffff;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-    }
-
 
     /**********************************
 
-    Estilo del carrito
+    Estilos del la seleccion de asientos
     
     **********************************/
 
+    .pay-section{
+        max-width: 60%;
+        background-color: white;
+    }
 
+    .pay-title{
+        font-size: 2rem;
+        color: #002438;
+    }
+    .personal-data{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .personal-data input{
+        height: 1.5rem;
+        width: 32%;
+        font-size: 1.25rem;
+    }
+
+    .pay-method{
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .pay-method input {
+        width: 200px;
+        height: 2rem;
+        font-size: 1.25rem;
+    }
+
+    /**********************************
+
+    Estilos del  carrito de compras
+    
+    **********************************/
     .cart-container {
         position: sticky;
         top: 20vh;
@@ -297,7 +245,7 @@
         background-color: #ffa500;
     }
 
-        /**********************************
+    /**********************************
 
     Estilo del modal
     
@@ -389,59 +337,43 @@
         color: #FFA500;
     }
     
+    
     /**********************************
 
     Estilo del footer
     
     **********************************/
-    .show-cart{
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #002244;
-        color: #fff;
-        text-align: center;
-        padding: 15px;
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-        opacity:0;
-    }
 
-    .show-cart input{
-        width: 50%;
-        height: 2rem;
-        background-color: #FFA500;
-        border-radius: 10px;
+    footer{
+        background-color: #002438;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+    }
+    .social-networks{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5.8rem;
+    }
+    
+    footer a {
+        text-decoration: none;
         font-size: 1.5rem;
     }
 
-    
-@media (max-width:768px) {
-    .cart-container{
-        display: none;
-    }
+@media (max-width:320px) {
 
-    .show-cart{
-        position: sticky;
-        opacity: 1;
-    }
-    
-
-    .food-menu{
-        gap: 0.5rem;
-    }
 }
 
-@media (max-width:320px) {
-    .food-menu{
-        flex-direction: column;
-    }
-
-    .food-section h1{
-        text-align: center;
-    }
-
-    .show-cart input{
-        width: 30%;
-        font-size: 1rem;
-    }
+@media (max-width:768px) {
+    
 }

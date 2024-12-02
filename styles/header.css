@@ -30,7 +30,7 @@
         font-size: 1rem;
         background-color: #38A1D9;
         max-width: 100%;
-        padding: 0.5em 2em;
+        padding: 1% 10%;
         border-radius: 0.5rem;
         margin: 0;
     }
@@ -39,5 +39,12 @@
         display: inline-block;
         background-color: #38A1D9;
         padding: 0.2em;
+        max-width: 30%;
         border-radius: 0.5em;
     }
+
+@media (max-width:768px){
+    .header-option{
+        padding: 3%;
+    }    
+}
