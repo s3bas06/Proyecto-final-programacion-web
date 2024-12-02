@@ -123,10 +123,50 @@ p{
         font-size: 2rem;
     }
 
-@media (max-width:320px) {
+@media (max-width:480px) {
+    .movie-title{
+        font-size: 2rem;
+    }
 
+    .movie-classification-duration-genre h1{
+        font-size: 1.5rem;
+    }
+
+    .buy-button{
+        font-size: 3px;
+    }
 }
 
-@media (max-width:768px) {
+@media (max-width:820px) {
+    .main-information{
+        text-align: center;
+        gap: 0;
+    }
+    .movie-sinopsis h1 {
+        font-size: 2rem;
+    }
+
+    .movie-sinopsis p {
+        font-size: 1rem;
+    }
+
+    .movie-classification-duration-genre h1{
+        font-size: 2rem;
+    }
+
+    .movie-classification-duration-genre p{
+        font-size: 1.5rem;
+    }
+
+    .movie-title{
+        font-size: 3rem;
+    }
+
+    .buy-button{
+        font-size: 1rem;
+    }
     
+    .movie-poster img{
+        width: 80%;
+    }
 }
