@@ -414,15 +414,14 @@
         font-size: 1.5rem;
     }
 
-    
 @media (max-width:768px) {
     .cart-container{
         display: none;
+        z-index: 0;
     }
 
     .show-cart{
         position: sticky;
-        opacity: 1;
     }
     
 
@@ -431,7 +430,8 @@
     }
 }
 
-@media (max-width:320px) {
+@media (max-width:596px){
+
     .food-menu{
         flex-direction: column;
     }
