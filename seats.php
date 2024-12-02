@@ -224,5 +224,11 @@
     <?php
         require 'footer.php';
     ?>
+
+    <footer class="show-cart">
+        <input type="button" value="Siguiente paso">
+    </footer>
+
+    <script src="js/seats.js"></script>
 </body>
 </html>

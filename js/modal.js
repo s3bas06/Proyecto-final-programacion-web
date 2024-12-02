@@ -1,12 +1,14 @@
-const openModal = document.querySelector('.combo-btn');
+const openModals = document.querySelectorAll('.combo-btn');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.confirm-button');
 
 const showCart = document.querySelector('.show-cart');
 
-openModal.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal.classList.add('modal--show');
+openModals.forEach(openModal => {
+    openModal.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modal.classList.add('modal--show');
+    });
 });
 
 closeModal.addEventListener('click', (e) =>{
