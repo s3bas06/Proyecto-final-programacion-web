@@ -17,6 +17,8 @@ p{
     color: white;
 }
 
+@media (max-width:1920px) {
+
     .welcome{
         margin-top: 2.0em;
         font-size: 2.5rem;
@@ -56,6 +58,10 @@ p{
     .user-information{
         text-align: center;
         float: right;
+    }
+
+    .password{
+        margin-left: 200px;
     }
 
     /**********************************
@@ -110,7 +116,7 @@ p{
         font-weight: bold; 
         padding: 0.5rem 2rem; 
         border-radius: 10px; 
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); 
+        box-shadow: 0px 4px 10px rgba(124, 108, 108, 0.25); 
         text-align: center; 
         cursor: pointer; 
         transition: transform 0.2s; 
@@ -119,8 +125,41 @@ p{
     .return a:hover {
         transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
     }
-    /**********************************
+}
 
-    Estilos del footer    
 
-    **********************************/
+/**********************************
+
+    Estilos de responsivo   
+
+**********************************/
+
+@media (max-width:1200px) {
+    
+
+    .welcome{
+        margin-left: 50px;
+    }
+
+    .information{
+        flex-direction: column-reverse;
+    }
+    .container-menu{
+        margin-top: 10%;
+        margin-left: 50px;
+    }    
+}
+
+@media (min-width:1550px) {
+    
+    .container-dates{
+        margin-top: 1.5rem;
+        margin-left: 10rem;
+    }
+
+    .dates p{
+        font-size: 2rem;
+    }
+
+}           
+

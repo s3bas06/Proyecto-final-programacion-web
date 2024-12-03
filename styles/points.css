@@ -121,3 +121,32 @@ p{
     .return a:hover {
         transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
     }
+
+    /**********************************
+
+    Estilos de responsivo   
+
+**********************************/
+
+@media (max-width:1000px) {
+
+    
+    .title{
+        font-size: 1rem;
+        margin-left: 5rem;
+        text-align: none;
+    }
+    
+    .information{
+        flex-direction: column-reverse;
+    }
+
+    .area{
+        flex-direction: column;
+    }
+
+    .container-menu{
+        margin-top: 2rem;
+    }
+  
+}

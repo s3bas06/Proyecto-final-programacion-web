@@ -23,8 +23,8 @@
             <div class="menu-options">
                 <a href=""><p>Datos personales</p></a>
                 <img src="assets/Line 1.png" alt="">
-                <a href="poitns.html"><p>Puntos</p></a>     
-                <a href="history.html"><p>Historial</p></a>
+                <a href="poitns.php"><p>Puntos</p></a>     
+                <a href="history.php"><p>Historial</p></a>
             </div>
         </div>  
        <div class="container-dates">
@@ -40,12 +40,12 @@
         <br>
             <div class="dates">
                 <p>Contraseña:</p>
-                <p >***********</p>             
+                <p class ="password" >***********</p>             
             </div>
        </div>     
     </div>
     <div class="return">
-        <a href="index.html"><p>volver</p></a>
+        <a href="inicio.php"><p>volver</p></a>
     </div>
 
 
