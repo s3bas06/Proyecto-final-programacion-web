@@ -50,6 +50,6 @@ a{
 
 @media (max-width:768px){
     .header-option{
-        padding: 3%;
+        padding: 0.30em 0.5em;
     }    
 }
