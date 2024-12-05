@@ -30,6 +30,10 @@ a{
         gap: 3em;
     }
 
+    .header-option:hover{
+       background-color:#445259;
+    }
+
     .header-option{
         text-align: center;
         font-size: 1rem;
@@ -46,6 +50,10 @@ a{
         padding: 0.2em;
         max-width: 30%;
         border-radius: 0.5em;
+    }
+
+    .user-icon:hover{
+        background-color: #445259;
     }
 
 @media (max-width:768px){
