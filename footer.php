@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cine totalus</title>
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https: //fonts.gstatic.com" crossorigin>
@@ -15,9 +16,9 @@
         <div class="footer-content">
             <div class="goback"><a href="inicio.php">Regresar</a></div>
             <div class="social-networks">
-                <a href="">Facebook</a>
-                <a href="">Instagram</a>
-                <a href="">X</a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
             <div class="contact"><a href="mailto:">Contacto</a></div>    
         </div>

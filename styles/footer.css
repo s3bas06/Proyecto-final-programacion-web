@@ -1,38 +1,60 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
-   
 }
 
-    /**********************************
+/**********************************
+Estilo del footer
+**********************************/
 
-    Estilo del footer
-    
-    **********************************/
+footer {
+    background-color: #002438;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Añade un poco de padding vertical */
+}
 
-    footer{
-        background-color: #002438;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .footer-content{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-    }
-    .social-networks{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-left: 5.8rem;
-    }
-    
-    footer a {
-        text-decoration: none;
-        font-size: 1.5rem;
-    }
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.social-networks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-networks a {
+    margin: 0 20px; 
+    font-size: 50px; 
+    color: #ffffff; 
+    transition: color 0.3s ease; 
+}
+
+.social-networks a:hover {
+    color: #cccccc; 
+}
+
+.goback, .contact {
+    flex-basis: 25%; 
+}
+
+.goback a:hover{
+    color: #cccccc;
+}
+
+.contact {
+    text-align: right; 
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #ffffff; 
+}
