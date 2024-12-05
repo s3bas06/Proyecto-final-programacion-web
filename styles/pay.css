@@ -61,7 +61,32 @@ p{
         cursor: pointer;
         transition: background-color 0.3s ease;
       }
-    
+
+      .pay-method input[type="button"] {
+
+          border-radius: 25px;
+          font-size: 16px;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          background-color: #FF6A13; /* Color sólido naranja pastel */
+          color: white;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+          margin-bottom: 10px; /* Separación entre botones */
+      }
+  
+      .pay-method input[type="button"]:hover {
+          background-color: #FF4500; /* Color más oscuro al pasar el mouse */
+      }
+  
+      .pay-method input[type="button"]:active {
+          background-color: #FF4500; /* Color sólido cuando se hace clic */
+      }
+  
+      .pay-method input[type="button"]:focus {
+          outline: none; /* Eliminar contorno predeterminado */
+          box-shadow: 0 0 0 3px rgba(255, 106, 19, 0.5); /* Sombra al hacer foco */
+      }
       .do-pay button:hover {
         background-color: #e69500; 
       }
@@ -71,6 +96,7 @@ p{
     }
 
     .pay-title{
+        text-align: center;
         font-size: 2rem;
         color: #002438;
     }

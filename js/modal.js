@@ -18,3 +18,4 @@ closeModal.addEventListener('click', (e) =>{
         showCart.style.opacity = "1";
     }
 });
+

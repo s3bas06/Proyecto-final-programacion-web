@@ -13,7 +13,7 @@
 <body>
     <footer>
         <div class="footer-content">
-            <div class="goback"><a href="index.html">Regresar</a></div>
+            <div class="goback"><a href="inicio.php">Regresar</a></div>
             <div class="social-networks">
                 <a href="">Facebook</a>
                 <a href="">Instagram</a>

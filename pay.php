@@ -21,13 +21,15 @@
             <h1 class="pay-title">Detalles de la compra</h1>
             <form action="">
                 <div class="pay-content">
-                    <h2>Datos personales</h2>
+                    <h2 >Datos personales</h2>
+                    <br>
                     <div class="personal-data">
                         <input type="text" name="names" id="" placeholder="Nombre(s)">
                         <input type="text" name="lastname1" id="" placeholder="Apellido paterno">
                         <input type="text" name="lastname2" id="" placeholder="Apellido materno">
                     </div>
                     <h2>Método de pago</h2>
+                    <br>
                     <div class="pay-method">
                         <input type="button" value="Tarjeta de crédito">
                         <input type="button" value="Kueski pay">
@@ -35,7 +37,7 @@
                         <input type="button" value="Paypal">
                     </div>
                     <div class="do-pay">
-                        <button>Realizar pago</button>
+                        <button class ="combo-btn">Realizar pago</button>
                     </div>
                 </div>
             </form>
@@ -83,75 +85,36 @@
 
     <section class="modal">
         <div class="modal-container">
-            <div class="modal-title"><h1>Detalles del alimento</h1></div>
+            <div class="modal-title"><h1>Detalles de la tarjeta</h1></div>
             <div class="food-details">
-                <h2>Tamaño</h2>
+                <h2>Datos de la persona</h2>
                 <div class="chexkbox-container">
-                    <label for="small">
-                        <input type="radio" name="option" id="size">
-                        Pequeñas
-                    </label>
-                    <label for="medium">
-                        <input type="radio" name="option" id="size">
-                        Medianas
-                    </label>
-                    <label for="big">
-                        <input type="radio" name="option" id="size">
-                        Grandes
-                    </label>
-                    <label for="take-out">
-                        <input type="radio" name="option" id="size">
-                        Para llevar
-                    </label>
+                      <input type="text" name="names" id="" placeholder="Nombre(s)">
+                      <input type="text" name="names" id="" placeholder="Apellido paterno">
+                      <input type="text" name="names" id="" placeholder="Apellido materno">
                 </div>
-                <h2>Sabor de las palomitas</h2>
+                
+                <h2>Datos de la tarjeta</h2>
                 <div class="chexkbox-container">
-                    <label for="caramel">
-                        <input type="checkbox" name="pequeñas" id="">
-                        Caramelo
-                    </label>
-                    <label for="butter">
-                        <input type="checkbox" name="medianas" id="">
-                        Mantequilla
-                    </label>
-                    <label for="takis-fuego">
-                        <input type="checkbox" name="Grandes" id="">
-                        Takis fuego
-                    </label>
-                    <label for="normal">
-                        <input type="checkbox" name="Grandes" id="">
-                        Normales
-                    </label>
+                    <input type="text" name="names" id="" placeholder="No. de tarjeta">
+                    <input type="text" name="names" id="" placeholder="MM/AA">
+                    <input type="text" name="names" id="" placeholder="CVV"> 
                 </div>
-                <h2>Sabor de tu refresco</h2>
-                <div class="chexkbox-container">
-                    <label for="pequeñas">
-                        <input type="checkbox" name="pequeñas" id="">
-                        Pequeñas
-                    </label>
-                    <label for="pequeñas">
-                        <input type="checkbox" name="medianas" id="">
-                        Medianas
-                    </label>
-                    <label for="pequeñas">
-                        <input type="checkbox" name="Grandes" id="">
-                        Grandes
-                    </label>
-                    <label for="pequeñas">
-                        <input type="checkbox" name="Grandes" id="">
-                        Para llevar
-                    </label>
-                </div>
+
             </div>
 
-            <button class="confirm-button">Confirmar</button>
+            <button class="confirm-button ">Confirmar</button>
+            <p id="error-message" class="error-message" style="display: none;">Por favor, completa todos los campos.</p>
         </div>
+        
     </section>
-
     <?php
         require 'footer.php';
     ?>
 
     <script src="js/modal.js"></script>
+    <script src="js/pay.js"></script>
+    <script src="js/boton.js"></script>
+    
 </body>
 </html>

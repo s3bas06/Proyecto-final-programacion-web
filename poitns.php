@@ -18,10 +18,10 @@
     <div class="information">
         <div class="container-menu">
             <div class="menu-options">
-                <a href="profile.html"><p>Datos personales</p></a>
+                <a href="profile.php"><p>Datos personales</p></a>
                 <a href=""><p>Puntos</p></a>     
                 <img src="assets/Line 1.png" alt="">
-                <a href="history.html"><p>Historial</p></a>
+                <a href="history.php"><p>Historial</p></a>
             </div>
         </div> 
         <div class="points">
@@ -38,7 +38,7 @@
 
     </div>
     <div class="return">
-        <a href="index.html"><p>volver</p></a>
+        <a href="inicio.php"><p>volver</p></a>
     </div>
 
     <?php

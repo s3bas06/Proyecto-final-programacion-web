@@ -21,27 +21,29 @@
     <div class="information">
         <div class="container-menu">
             <div class="menu-options">
-                <a href="profile.html"><p>Datos personales</p></a>
-                <a href="poitns.html"><p>Puntos</p></a>     
+                <a href="profile.php"><p>Datos personales</p></a>
+                <a href="poitns.php"><p>Puntos</p></a>     
                 <a href=""><p>Historial</p></a>
                 <img src="assets/Line 1.png" alt="">
             </div>
         </div> 
         <div class="movies">
-            <div class="poster">
-                <img src="assets/movie-poster.png" alt="">
+            <div class="area">
+                <div class="poster">
+                    <img src="assets/movie-poster.png" alt="">
+                </div>
+                <div class="poster">
+                    <img src="assets/movie-poster.png" alt="">
+                </div>
+                <div class="poster">
+                    <img src="assets/movie-poster.png" alt="">
+                </div>
             </div>
-            <div class="poster">
-                <img src="assets/movie-poster.png" alt="">
-            </div>
-            <div class="poster">
-                <img src="assets/movie-poster.png" alt="">
-            </div>
-            
+
         </div>
     </div>
     <div class="return">
-        <a href="index.html"><p>volver</p></a>
+        <a href="inicio.php"><p>volver</p></a>
     </div>
 
     <?php
