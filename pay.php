@@ -23,9 +23,9 @@
                 <div class="pay-content">
                     <h2>Datos personales</h2>
                     <div class="personal-data">
-                        <input type="text" name="names" id="">
-                        <input type="text" name="lastname1" id="">
-                        <input type="text" name="lastname2" id="">
+                        <input type="text" name="names" id="" placeholder="Nombre(s)">
+                        <input type="text" name="lastname1" id="" placeholder="Apellido paterno">
+                        <input type="text" name="lastname2" id="" placeholder="Apellido materno">
                     </div>
                     <h2>Método de pago</h2>
                     <div class="pay-method">
@@ -33,6 +33,9 @@
                         <input type="button" value="Kueski pay">
                         <input type="button" value="Click to pay">
                         <input type="button" value="Paypal">
+                    </div>
+                    <div class="do-pay">
+                        <button>Realizar pago</button>
                     </div>
                 </div>
             </form>

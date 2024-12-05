@@ -30,13 +30,44 @@ p{
 
     /**********************************
 
-    Estilos del la seleccion de asientos
+    Estilos del la seleccion de pago
     
     **********************************/
 
     .pay-section{
-        max-width: 60%;
+        margin-top: 7rem;
+        min-width: 45%;
+        min-height: 20rem;
         background-color: white;
+        border-radius: 2%;
+    }
+
+
+    .do-pay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+      }
+      
+      .do-pay button {
+        background-color: #FFA500;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    
+      .do-pay button:hover {
+        background-color: #e69500; 
+      }
+
+    .pay-content h2{
+        margin-top: 2rem;
     }
 
     .pay-title{
