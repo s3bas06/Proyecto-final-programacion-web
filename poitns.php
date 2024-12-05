@@ -42,7 +42,7 @@
     </div>
 
     <?php
-        require 'footer.php';
+        require 'footer_profile.php';
     ?>
 
 </body>

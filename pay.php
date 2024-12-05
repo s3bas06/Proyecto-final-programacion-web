@@ -109,7 +109,7 @@
         
     </section>
     <?php
-        require 'footer.php';
+        require 'footer_profile.php';
     ?>
 
     <script src="js/modal.js"></script>

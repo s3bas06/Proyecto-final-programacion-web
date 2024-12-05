@@ -9,7 +9,8 @@ Estilo del footer
 **********************************/
 
 footer {
-
+    position: absolute;
+    bottom: 0;
     background-color: #002438;
     display: flex;
     justify-content: center;
