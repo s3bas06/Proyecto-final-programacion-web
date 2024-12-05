@@ -28,7 +28,7 @@
                     echo '<h1 class="movie-title">'.$_SESSION['movie'].'</h1>'
                 ?>
                 
-                <button class="buy-button">Comprar boletos</button>
+                <div class="buy-button"><a href="schedule.php">Comprar boletos</a></div>
             </div>
         </div>
 
