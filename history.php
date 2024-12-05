@@ -38,6 +38,9 @@
                 <div class="poster">
                     <img src="assets/movie-poster.png" alt="">
                 </div>
+                <div class="poster">
+                    <img src="assets/movie-poster.png" alt="">
+                </div>
             </div>
 
         </div>

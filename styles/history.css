@@ -101,8 +101,8 @@ p{
     **********************************/
     .area{
         display: flex;
-        margin-left: 12em;
- 
+        margin-left: 8em;
+        
     }
 
     .movies{
