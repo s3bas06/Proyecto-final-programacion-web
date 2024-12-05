@@ -72,6 +72,9 @@
         require 'footer.php';
     ?>
 
+    <footer class="show-cart">
+        <input class="show-cart-button" type="button" value="Proceder al pago">
+    </footer>
     
 
     <script src="js/modal.js"></script>
