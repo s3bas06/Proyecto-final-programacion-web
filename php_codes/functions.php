@@ -22,7 +22,6 @@
         $row = searchMovie();
 
         echo '<div class="movie-poster"><img src="'.$row['poster_url'].'" alt=""></div>';
-
     }
     function getSinopsis(){
         $row = searchMovie();

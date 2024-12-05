@@ -14,22 +14,25 @@
     
     <?php
         require 'header.php';
+        session_start();
+        require 'php_codes/functions.php';
     ?>
     
     <main>
-        <div class="movie-poster">
-            <h1 class="movie-name">Nombre de la pelicula</h1>
-            <img src="assets/movie-big-poster.png" alt="">
+        <div class="movie-poster-main">
+            <?php
+                echo '<h1 class="movie-name">'.$_SESSION['movie'].'</h1>';
+                getPoster();
+            ?>
+            
         </div>
 
         <div class="main-content">
             <div class="main-sinopsis">
                 <h2>Sinopsis</h2>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta tempora quis expedita. Nostrum unde, quas, sed fugit illum nemo reprehenderit optio, cupiditate tempore nihil saepe fugiat assumenda vero natus aliquam? 
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, ad doloribus? Eum dolore, quisquam facilis rem sapiente, dolorem nostrum impedit odio, repellendus alias suscipit labore praesentium asperiores consectetur. Totam, illo. 
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum nisi atque, cum consequuntur doloremque odio molestiae iusto dolores harum nam vel quo impedit sint consequatur ea nulla reprehenderit, deleniti at. 
-                </p>                
+                <?php
+                    getSinopsis();
+                ?>
             </div>
 
             <div class="main-function">

@@ -24,7 +24,7 @@ p{
         align-items: center;
         justify-content: center;
         padding: 13.67vh 0;
-        gap: 2rem;
+        gap: 0rem;
     }
 
     .main-sinopsis {
@@ -36,11 +36,20 @@ p{
         font-size: 1.5rem;
     }
 
-    .movie-poster{
+    .movie-poster-main{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    .movie-poster{
+        text-align: center;
+        max-width: 70%;
+    }
+    .movie-poster img {
+        max-width: 100%;
+    }
+
     .movie-name{
         text-align: center;
         margin-bottom: 1rem;
@@ -118,6 +127,7 @@ p{
     .movie-poster img{
         max-width: 100%;
     }
+
     main{
         flex-direction: column;
         justify-content: center;
