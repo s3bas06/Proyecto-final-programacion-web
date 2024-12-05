@@ -21,8 +21,13 @@
             $stmt->bindValue(':password', $hashedPassword);
             $stmt->bindValue(':email', $email);
 
-            $stmt->execute();
-            header('location:inicio.php');
+            if($stmt->execute()){
+                $_SESSION['usuario_id'] = $pdo->lastInsertId();
+                header('location:..//inicio.php');
+            } else {
+                header('location:register_form.php?status=3');
+            }
+
         } else{
             header('location:register_form.php?status=3');
         }

@@ -13,6 +13,7 @@
 <body>
     
     <?php
+        session_start();
         require 'header.php';
     ?>
 
@@ -44,7 +45,8 @@
 
     <div class="movie-listings">
         <?php
-            require 'php_codes/moviesPosters.php';
+            require 'php_codes/functions.php';
+            getMoviesIndex();
         ?>
     </div>
 

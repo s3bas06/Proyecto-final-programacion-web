@@ -14,10 +14,14 @@
     
     <?php
         require 'header.php';
+        require 'php_codes/functions.php';
+        getMovie();
     ?>
-    
     <main>
         <div class="main-information">
+            <?php
+                getPoster();
+            ?>
             <div class="movie-poster"><img src="assets/movie-big-poster.png" alt=""></div>
             <div class="movie-main-information">
                 <h1 class="movie-title">Inserte el titulo de una pelicula</h1>

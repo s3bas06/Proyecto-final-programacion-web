@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] !== 'POST') {
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if($stmt->rowCount() === 1 && password_verify($password, $row['password'])) {
             $_SESSION['usuario_id'] = $row['id'];
-            header('location:inicio.php');
+            header('location:..//inicio.php');
         } else {
             header('location:login.php?status=3');
         }
