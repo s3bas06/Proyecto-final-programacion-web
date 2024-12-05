@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumen de compra</title>
-    <link rel="stylesheet" href="styles/food.css">
+    <link rel="stylesheet" href="styles/summary.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,12 +21,12 @@
         <div class="main-panel">
             <h1>¡Muchas gracias por su compra!</h1>
             <div class="main-content">
-                <img src="assets/qr.png" alt="qr">
+              <img src="assets/qr.png" alt="qr">
             </div>
-            <p>Escanee este codigo QR para validar sus boletos</p>
+              <p>Escanee este codigo QR para validar sus boletos</p>
         </div>
+         
 
-        
         <div class="cart-container">
             <header class="cart-header">
               <h1>Tu carrito</h1>
@@ -72,9 +72,7 @@
         require 'footer.php';
     ?>
 
-    <footer class="show-cart">
-        <input class="show-cart-button" type="button" value="Proceder al pago">
-    </footer>
+    
 
     <script src="js/modal.js"></script>
 </body>
