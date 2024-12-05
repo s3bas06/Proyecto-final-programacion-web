@@ -32,7 +32,7 @@
         <div class="display-option"></div>
     </main>
 
-    <div class="cine-selection">
+    <div class="cine-selection" id="movies">
         <label class="cine-title">Descubre tu cartelera en tu cine</label>
         <select name="cine-selector" id="cine-selector">
             <option value="cine1">Cine 1</option>
@@ -43,54 +43,9 @@
     </div>
 
     <div class="movie-listings">
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 1</p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 2</p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 3</p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 4</p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 5</p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 6</p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 7</p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 8</p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 9</p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 10</p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 11 </p>
-        </div>
-        <div class="movie-option">
-            <img src="assets/movie-poster.png" alt="">
-            <p class="movie-title">Pelicula 12</p>
-        </div>
+        <?php
+            require 'php_codes/moviesPosters.php';
+        ?>
     </div>
 
     <?php

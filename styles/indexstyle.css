@@ -125,6 +125,11 @@
         text-align: center;
     }
 
+    .movie-option img{
+        max-width: 275px;
+        max-height: 380px;
+    }
+
 @media (max-width:320px) {
 
 }
