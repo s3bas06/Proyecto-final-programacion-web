@@ -1,14 +1,12 @@
 <?php
     require 'database.php';
-    session_start();
     function getMovie(){
-        echo $_SESSION['usuario_id'];
+        session_start();
         if (isset($_GET['title'])) {
             $_SESSION['movie'] = $_GET['title'];
         }
     }
-
-    function getPoster(){
+    function searchMovie(){
         $db = new Database();
         $pdo = $db->getConnection();
         $query = "SELECT * FROM peliculas WHERE titulo = :titulo";
@@ -16,9 +14,38 @@
         $stmt->bindValue(':titulo', $_SESSION['movie']);
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        
 
+        return $row;
+    }
+
+    function getPoster(){
+        $row = searchMovie();
+
+        echo '<div class="movie-poster"><img src="'.$row['poster_url'].'" alt=""></div>';
+
+    }
+    function getSinopsis(){
+        $row = searchMovie();
+
+        echo '<p>'.$row['sinopsis'].'</p>';
+    }
+
+    function getClassification(){
+        $row = searchMovie();
+
+        echo '<p>'.$row['clasificacion'].'</p>';
+    }
+
+    function getGenre(){
+        $row = searchMovie();
+
+        echo '<p>'.$row['genero'].'</p>';
+    }
+
+    function getDuration(){
+        $row = searchMovie();
+
+        echo '<p>'.$row['duracion'].'</p>';
     }
 
     function getMoviesIndex(){

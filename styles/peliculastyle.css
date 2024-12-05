@@ -105,7 +105,7 @@ p{
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .movie-classification-duration-genre{
@@ -125,7 +125,7 @@ p{
 
 @media (max-width:480px) {
     .movie-title{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .movie-classification-duration-genre h1{
@@ -134,6 +134,11 @@ p{
 
     .buy-button{
         font-size: 3px;
+    }
+
+    .movie-poster img{
+        width: 30%;
+        height: 30%;
     }
 }
 
@@ -168,5 +173,6 @@ p{
     
     .movie-poster img{
         width: 80%;
+        height: 100%;
     }
 }

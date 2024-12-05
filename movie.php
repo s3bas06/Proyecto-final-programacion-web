@@ -22,9 +22,12 @@
             <?php
                 getPoster();
             ?>
-            <div class="movie-poster"><img src="assets/movie-big-poster.png" alt=""></div>
+            
             <div class="movie-main-information">
-                <h1 class="movie-title">Inserte el titulo de una pelicula</h1>
+                <?php
+                    echo '<h1 class="movie-title">'.$_SESSION['movie'].'</h1>'
+                ?>
+                
                 <button class="buy-button">Comprar boletos</button>
             </div>
         </div>
@@ -32,27 +35,31 @@
         <div class="movie-information">
             <div class="movie-sinopsis">
                 <h1>Sinopsis</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quae assumenda animi autem aut qui possimus praesentium similique laboriosam id, ad quos pariatur suscipit repellat vero itaque placeat at fuga?<br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iure tempore ipsam nobis, magni a aspernatur id quod, rerum porro modi neque minima sunt voluptates qui nesciunt? Deleniti, dolorum vel. 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus molestias ullam, laboriosam tempora, omnis placeat odio perferendis, facere exercitationem laudantium recusandae harum a asperiores? Blanditiis facere ad ab eaque nemo.
-                </p>
+                <?php
+                    getSinopsis();
+                ?>
             </div>
     
             <div class="movie-characteristics">
                 <div class="movie-classification-duration-genre">
                     <h1>Clasificación</h1>
-                    <p>Lorem</p>
+                    <?php
+                        getClassification();
+                    ?>
                 </div>
     
                 <div class="movie-classification-duration-genre">
                     <h1>Duración</h1>
-                    <p>Lorem</p>
+                    <?php
+                        getDuration();
+                    ?>
                 </div>
     
                 <div class="movie-classification-duration-genre">
                     <h1>Género</h1>
-                    <p>Lorem</p>
+                    <?php
+                        getGenre();
+                    ?>
                 </div>
             </div>
         </div>
