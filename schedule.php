@@ -35,6 +35,7 @@
                 ?>
             </div>
 
+            <form method="POST" action="php_codes/changeDate.php">
             <div class="main-function">
                 <div class="selectors" id="interface">
                     <select name="cine-selection" id="comboBox" class="first-combobox">
@@ -44,80 +45,28 @@
                         <option value="cine4">Cine 4</option>
                     </select>
                     <select name="ticket" id="comboBox" class="ticket">
+                        <option value="" disabled selected>Boletos adulto</option>
                         <option value="adult1">1</option>
                         <option value="adult2">2</option>
                         <option value="adult3">3</option>
                         <option value="adult4">4</option>
                     </select>
                     <select name="ticket" id="comboBox" class="ticket">
+                        <option value="" disabled selected>Boletos niño</option>
                         <option value="children1">1</option>
                         <option value="children2">2</option>
                         <option value="children3">3</option>
                         <option value="children4">4</option>
                     </select>
                 </div>
-                
-                <div class="day-function" id="interface">
-                    <div class="day">
-                        <p>12 SEP</p>
-                    </div>
-                    <label>
-                        <input type="radio" name="option" id="schedule1">
-                        10:30
-                    </label>
 
-                    <label>
-                        <input type="radio" name="option" id="schedule1">
-                        11:30
-                    </label>
-                </div>
 
-                <div class="day-function" id="interface">
-                    <div class="day">
-                        <p>13 SEP</p>
-                    </div>
-                    <label>
-                        <input type="radio" name="option" id="schedule1">
-                        10:30
-                    </label>
+                <?php
+                    require 'php_codes/scheduleGenerator.php';
+                ?>
 
-                    <label>
-                        <input type="radio" name="option" id="schedule1">
-                        11:30
-                    </label>
-                </div>
-
-                <div class="day-function" id="interface">
-                    <div class="day">
-                        <p>14 SEP</p>
-                    </div>
-                    <label>
-                        <input type="radio" name="option" id="schedule1">
-                        10:30
-                    </label>
-
-                    <label>
-                        <input type="radio" name="option" id="schedule1">
-                        11:30
-                    </label>
-                </div>
-
-                <div class="day-function" id="interface">
-                    <div class="day">
-                        <p>15 SEP</p>
-                    </div>
-                    <label>
-                        <input type="radio" name="option" id="schedule1">
-                        10:30
-                    </label>
-
-                    <label>
-                        <input type="radio" name="option" id="schedule1">
-                        11:30
-                    </label>
-                </div>
             </div>
-
+            </form>
             <div class="button">
                 <button class="confirm-button">Confirmar</button>
             </div>

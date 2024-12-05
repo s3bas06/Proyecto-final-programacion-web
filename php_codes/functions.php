@@ -1,9 +1,12 @@
 <?php
-    require 'database.php';
+    require_once 'database.php';
     function getMovie(){
         session_start();
         if (isset($_GET['title'])) {
             $_SESSION['movie'] = $_GET['title'];
+            $row = searchMovie();
+            $_SESSION['id_movie'] = $row['id'];
+            $_SESSION['date_function'] = '2024-12-06';
         }
     }
     function searchMovie(){
