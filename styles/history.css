@@ -13,6 +13,15 @@ h1 {
     color: white;
 }
 
+body {
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
 p{
     color: white;
 }

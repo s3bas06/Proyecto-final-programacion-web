@@ -14,8 +14,8 @@ footer {
     background-color: #002438;
     display: flex;
     justify-content: center;
-    width: 100%; /* Asegura que abarque todo el ancho */
-    padding: 20px 0; /* Agrega espacio si es necesario */
+    width: 100%; 
+    padding: 20px 0; 
 }
 
 .footer-content {
@@ -23,9 +23,9 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%; /* Permite que el contenido abarque todo el ancho del footer */
-    max-width: 1200px; /* Opcional: restringe el ancho máximo */
-    padding: 0 20px; /* Agrega espacio horizontal interno */
+    width: 100%;
+    max-width: 1200px; 
+    padding: 0 20px; 
 }
 
 .social-networks {

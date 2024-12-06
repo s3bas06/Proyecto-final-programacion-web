@@ -130,7 +130,7 @@
         
     </section>
     <?php
-        require 'footer_profile.php';
+        require 'footer.php';
     ?>
 
     <footer class="show-cart">

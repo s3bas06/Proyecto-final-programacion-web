@@ -34,3 +34,26 @@ document.querySelectorAll('.pay-method input').forEach(button => {
 });
 
 
+document.querySelector('.pay-button').addEventListener('click', function(event) {
+    // Seleccionamos todos los inputs de texto
+    const textInputs = document.querySelectorAll('input[type="text"]');
+    let allFieldsFilled = true;
+
+    // Verificamos si cada campo está lleno
+    textInputs.forEach(input => {
+        if (input.value.trim() === "") {
+            allFieldsFilled = false;
+            input.style.borderColor = 'red'; // Resaltar los campos vacíos
+        } else {
+            input.style.borderColor = ''; // Restaurar el borde normal
+        }
+    });
+
+    // Si hay algún campo vacío, evitar el cambio de página
+    if (!allFieldsFilled) {
+        event.preventDefault();
+        alert('Por favor, complete todos los campos antes de continuar.');
+    }
+});
+
+

@@ -46,27 +46,27 @@
                     <div class="food-option">
                         <h3>Combo 1</h3>
                         <img src="food/combo2.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn" class ="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Combo 2</h3>
                         <img src="food/combo3.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn" class ="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Combo 3</h3>
                         <img src="food/combomediano.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn" class ="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Combo 4</h3>
                         <img src="food/combocuates.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn" class ="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Combo 5</h3>
                         <img src="food/combo5.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn" class ="combo-btn-1"><b>Agregar</b></button>
                     </div>
                 </div>
             </div>
@@ -77,22 +77,22 @@
                     <div class="food-option">
                         <h3>Palomitas 1</h3>
                         <img src="food/palimitasmantequilla.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Palomitas 2</h3>
                         <img src="food/bolsa.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Palomitas 3</h3>
                         <img src="food/takis.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Palomitas 4</h3>
                         <img src="food/caramelo.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                 </div>
             </div>
@@ -108,22 +108,22 @@
                     <div class="food-option">
                         <h3>Bebida 2</h3>
                         <img src="food/pepsi.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Bebida 3</h3>
                         <img src="food/cocacola.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Bebida 4</h3>
                         <img src="food/sprite.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Bebida 5</h3>
                         <img src="food/fantadefresa.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                 </div>
             </div>
@@ -134,17 +134,17 @@
                     <div class="food-option">
                         <h3>Dulce 1</h3>
                         <img src="food/chocolate.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Dulce 2</h3>
                         <img src="food/chocolate2.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Dulce 3</h3>
                         <img src="food/chocolate3.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                 </div>
             </div>
@@ -191,7 +191,7 @@
         
             <div class="food-section">
               <h3>Alimentos</h3>
-              <p>No has agregado alimentos a tu orden</p>
+              <p id="food-message">No has agregado alimentos a tu orden</p>
             </div>
         
             <div class="totals">
@@ -283,8 +283,23 @@
     <footer class="show-cart">
         <input type="button" value="Proceder al pago">
     </footer>
-
-
     <script src="js/modal.js"></script>
+
+    <script>
+const addButtons = document.querySelectorAll('.combo-btn-1, .combo-btn');
+addButtons.forEach((button) => {
+    button.addEventListener('click', function () {
+        const foodName = this.parentElement.querySelector('h3').textContent;
+        const foodMessage = document.getElementById('food-message');
+        
+        if (foodMessage.textContent === "No has agregado alimentos a tu orden") {
+            foodMessage.textContent = foodName;
+        } else {
+            foodMessage.textContent += `, ${foodName}`;
+        }
+    });
+});
+</script>
+
 </body>
 </html>

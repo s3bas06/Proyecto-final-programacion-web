@@ -46,11 +46,36 @@ body, html {
     .pay-section{
         margin-top: 7rem;
         min-width: 45%;
-        min-height: 20rem;
-        background-color: white;
+        min-height: 24rem;
+        background-color: rgb(198, 194, 194);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         border-radius: 2%;
     }
 
+    .personal-data input[type="text"] {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #333;
+        background-color: #fdfdfd;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .personal-data input[type="text"]:hover {
+        border-color: #4A90E2;
+    }
+    
+    .personal-data input[type="text"]:focus {
+        border-color: #4A90E2;
+        box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
+        outline: none;
+    }
+    
+    .personal-data input[type="text"]::placeholder {
+        color: #999;
+        font-style: italic;
+    }
 
     .do-pay {
         display: flex;
@@ -72,30 +97,32 @@ body, html {
       }
 
       .pay-method input[type="button"] {
-
-          border-radius: 25px;
-          font-size: 16px;
-          font-weight: bold;
-          text-transform: uppercase;
-          cursor: pointer;
-          background-color: #FF6A13; /* Color sólido naranja pastel */
-          color: white;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-          margin-bottom: 10px; /* Separación entre botones */
-      }
-  
-      .pay-method input[type="button"]:hover {
-          background-color: #FF4500; /* Color más oscuro al pasar el mouse */
-      }
-  
-      .pay-method input[type="button"]:active {
-          background-color: #FF4500; /* Color sólido cuando se hace clic */
-      }
-  
-      .pay-method input[type="button"]:focus {
-          outline: none; /* Eliminar contorno predeterminado */
-          box-shadow: 0 0 0 3px rgba(255, 106, 19, 0.5); /* Sombra al hacer foco */
-      }
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: #007BFF; /* Azul brillante */
+        color: white;
+        border: 2px solid #004AAD; /* Azul oscuro */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .pay-method input[type="button"]:hover {
+        background-color: #0056b3; /* Azul intermedio */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .pay-method input[type="button"]:active {
+        background-color: #003d80; /* Azul más profundo */
+    }
+    
+    .pay-method input[type="button"]:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Sombra azul clara */
+    }
       .do-pay button:hover {
         background-color: #e69500; 
       }
@@ -112,6 +139,10 @@ body, html {
     .personal-data{
         display: flex;
         gap: 2rem;
+    }
+
+    .pay-content h2{
+        text-align: center;
     }
 
     .personal-data input{
@@ -339,6 +370,32 @@ body, html {
         flex-wrap: wrap;
         gap: 0.5em;
         font-size: 1rem;
+    }
+
+    .chexkbox-container input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #333;
+        background-color: #fdfdfd;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .chexkbox-container input[type="text"]:hover {
+        border-color: #4A90E2;
+    }
+    
+    .chexkbox-container input[type="text"]:focus {
+        border-color: #4A90E2;
+        box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
+        outline: none;
+    }
+    
+    .chexkbox-container input[type="text"]::placeholder {
+        color: #999;
+        font-style: italic;
     }
     .chexkbox-container label{
         background-color: #38A1D9;
