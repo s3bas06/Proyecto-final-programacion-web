@@ -1,82 +1,59 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const seats = document.querySelectorAll('.seat:not(.reserved)');
-    const cart = document.querySelector('.cart-container');
-    const totalElement = document.querySelector('.cart-total');
-    const grandTotalElement = document.querySelector('.grand-total span');
-    const selectedSeatsElement = document.querySelector('#selected-seats');
-    const payButton = document.querySelector('.pay-button');
-    const nextStepButton = document.querySelector('.show-cart input');
 
-    let selectedSeats = [];
-    const ticketPrice = 50; // Precio por asiento
-    const maxSeatsAllowed = 5; // Número máximo de asientos permitidos
+const configElement = document.getElementById('session-config');
+const maxSeatsAllowed = parseInt(configElement.getAttribute('data-max-seats'), 10);
 
-    seats.forEach(seat => {
-        seat.addEventListener('click', (e) => {
-            e.preventDefault();
+let selectedSeats = 0; // Contador de asientos seleccionados.
 
-            if (seat.classList.contains('selected')) {
-                // Desmarcar el asiento si ya está seleccionado
-                seat.classList.remove('selected');
-            } else {
-                if (selectedSeats.length < maxSeatsAllowed) {
-                    seat.classList.add('selected');
-                } else {
-                    alert(`Has alcanzado el límite de ${maxSeatsAllowed} boletos permitidos.`);
-                    return;
-                }
-            }
-            updateSelectedSeats();
-            updateCart();
-        });
-    });
+const seats = document.querySelectorAll('.seat');
+const cartTotal = document.querySelector('.cart-total');
+const cartDetails = document.querySelector('.cart-details');
 
-    function updateSelectedSeats() {
-        selectedSeats = Array.from(document.querySelectorAll('.seat.selected')).map(seat => {
-            const row = seat.closest('.row').querySelector('.row-name').textContent;
-            const seatNumber = seat.textContent;
-            return `${row}${seatNumber}`;
-        });
-    }
-
-    function updateCart() {
-        const numSeats = selectedSeats.length;
-        const subtotal = numSeats * ticketPrice;
-        const serviceFee = 8; // Tarifa de servicio fija
-        const total = subtotal + serviceFee;
-
-        totalElement.textContent = `$${subtotal.toFixed(2)}`;
-        grandTotalElement.textContent = `$${total.toFixed(2)}`;
-        selectedSeatsElement.textContent = `Asientos seleccionados: ${selectedSeats.join(', ')}`;
-
-        // Mostrar/ocultar carrito basado en la selección de asientos
-        if (numSeats > 0) {
-            cart.style.display = 'block';
-            nextStepButton.style.display = 'none';
-        } else {
-            cart.style.display = 'none';
-            nextStepButton.style.display = 'block';
+// Agrega un event listener a cada asiento.
+seats.forEach(seat => {
+    seat.addEventListener('click', () => {
+        // Verifica si el asiento está reservado.
+        if (seat.classList.contains('reserved')) {
+            alert('Este asiento está reservado.');
+            return;
         }
-    }
 
-    payButton.addEventListener('click', () => {
-        if (selectedSeats.length > 0) {
-            alert(`Reserva confirmada para los asientos: ${selectedSeats.join(', ')}. Total: $${grandTotalElement.textContent}`);
-            // Aquí normalmente enviarías estos datos al servidor
-        } else {
-            alert('Por favor, selecciona al menos un asiento antes de pagar.');
+       
+        if (selectedSeats >= maxSeatsAllowed && !seat.classList.contains('selected')) {
+            alert('Has alcanzado el límite de boletos seleccionados.');
+            return;
         }
-    });
 
-    nextStepButton.addEventListener('click', () => {
-        if (selectedSeats.length > 0) {
-            cart.style.display = 'block';
-            nextStepButton.style.display = 'none';
+        
+        if (!seat.classList.contains('selected')) {
+            seat.classList.add('selected');
+            selectedSeats++;
         } else {
-            alert('Por favor, selecciona al menos un asiento antes de continuar.');
+            seat.classList.remove('selected');
+            selectedSeats--;
         }
-    });
 
-    // Actualización inicial del carrito
-    updateCart();
+       
+        updateCart();
+    });
 });
+
+// Función para actualizar el carrito.
+function updateCart() {
+    const pricePerTicket = 50; // Precio por boleto 
+    const totalPrice = pricePerTicket * selectedSeats;
+
+    if (selectedSeats > 0) {
+        cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
+        cartDetails.innerHTML = `
+            <h3>Asientos seleccionados</h3>
+            <p><strong>Boletos seleccionados:</strong> ${selectedSeats}</p>
+            <p class="price">$${totalPrice.toFixed(2)}</p>
+        `;
+    } else {
+        cartTotal.textContent = '$0.00';
+        cartDetails.innerHTML = `
+            <h3>Asientos seleccionados</h3>
+            <p>No has seleccionado ningún asiento.</p>
+        `;
+    }
+}
