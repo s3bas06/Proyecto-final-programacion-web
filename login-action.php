@@ -2,11 +2,13 @@
 session_start();
 require_once('database.php');
 
-if($_SERVER['REQUEST_METHOD'] !== 'POST') {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('location:login.php?status=3');
+    exit();
 } else {
-    if(!isset($_POST['email']) || !isset($_POST['password'])) {
+    if (!isset($_POST['email']) || !isset($_POST['password'])) {
         header('location:login.php?status=1');
+        exit();
     } else {
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -18,11 +20,14 @@ if($_SERVER['REQUEST_METHOD'] !== 'POST') {
         $stmt->bindValue(':email', $email);
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        if($stmt->rowCount() === 1 && password_verify($password, $row['password'])) {
+        
+        if ($stmt->rowCount() === 1 && password_verify($password, $row['password'])) {
             $_SESSION['usuario_id'] = $row['id'];
             header('location:inicio.php');
+            exit();
         } else {
             header('location:login.php?status=3');
+            exit();
         }
     }
 }

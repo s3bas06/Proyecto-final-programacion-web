@@ -22,7 +22,7 @@
             $stmt->bindValue(':email', $email);
 
             $stmt->execute();
-            header('location:inicio.php');
+            header('location:login.php');
         } else{
             header('location:register_form.php?status=3');
         }
