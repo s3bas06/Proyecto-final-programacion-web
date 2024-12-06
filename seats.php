@@ -196,7 +196,13 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
         <div class="cart-container">
             <header class="cart-header">
               <h1>Tu carrito</h1>
-              <span class="cart-total">$50.00</span>
+              <?php
+              $price = ($_SESSION['adult_tickets'] * 75) + ($_SESSION['children_tickets'] * 50);
+              $_SESSION['subtotal'] = $price;
+              $service = 8;
+              $total_cart = $service + $_SESSION['subtotal'];
+              echo '<span class="cart-total">$'.$total_cart.'.00</span>';
+              ?>
             </header>
         
             <div class="cart-item">
@@ -222,7 +228,7 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
                 $price = ($_SESSION['adult_tickets'] * 75) + ($_SESSION['children_tickets'] * 50);
                 
                 echo '<p class="price">$'.$price.'.00</p>';
-                $_SESSION['subtotal'] = $price;
+                
               ?>
             </div>
         
@@ -235,8 +241,9 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
             <?php
                 echo '<p>Subtotal: <span>$'.$_SESSION['subtotal'].'.00</span></p>';
                 $service = 8;
+                $total_cart = $service + $_SESSION['subtotal'];
                 echo '<p>Cargo por servicio: <span>$'.$service.'.00</span></p>';
-                echo '<p class="grand-total">Total: <span>$'.$service + $_SESSION['subtotal'].'.00</span></p>';
+                echo '<p class="grand-total">Total: <span>$'.$total_cart.'.00</span></p>';
             ?>
             </div>
         
