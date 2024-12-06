@@ -16,6 +16,7 @@
         require 'header.php';
         require 'php_codes/functions.php';
         session_start();
+        
     ?>
     
     <main>
@@ -27,27 +28,27 @@
                         <div class="food-option">
                             <h3>Combo 1</h3>
                             <img src="food/combo2.jpg" alt="">
-                            <button class="combo-btn"><b>Agregar</b></button>
+                            <button class="combo-btn" class="combo-btn-1"><b>Agregar</b></button>
                         </div>
                         <div class="food-option">
                             <h3>Combo 2</h3>
                             <img src="food/combo3.jpg" alt="">
-                            <button class="combo-btn"><b>Agregar</b></button>
+                            <button class="combo-btn" class="combo-btn-1"><b>Agregar</b></button>
                         </div>
                         <div class="food-option">
                             <h3>Combo 3</h3>
                             <img src="food/combomediano.jpg" alt="">
-                            <button class="combo-btn"><b>Agregar</b></button>
+                            <button class="combo-btn" class="combo-btn-1"><b>Agregar</b></button>
                         </div>
                         <div class="food-option">
                             <h3>Combo 4</h3>
                             <img src="food/combocuates.jpg" alt="">
-                            <button class="combo-btn"><b>Agregar</b></button>
+                            <button class="combo-btn" class="combo-btn-1"><b>Agregar</b></button>
                         </div>
                         <div class="food-option">
                             <h3>Combo 5</h3>
                             <img src="food/combo5.jpg" alt="">
-                            <button class="combo-btn"><b>Agregar</b></button>
+                            <button class="combo-btn" class="combo-btn-1"><b>Agregar</b></button>
                         </div>
                     </div>
                 </div>
