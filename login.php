@@ -14,7 +14,7 @@
           <input type="email" placeholder="Email" name="email">
         </div>
         <div class="input-group">
-          <input type="password" placeholder="Contraseña" name="password">
+          <input type="password" id="password" placeholder="Contraseña" name="password">
         </div>
         <div class="checkbox-group">
           <input type="checkbox" id="show-password">
@@ -27,5 +27,19 @@
         </div>
       </form>
       </div>
+      <script>
+        
+        const passwordInput = document.getElementById('password');
+        const showPasswordCheckbox = document.getElementById('show-password');
+
+        
+        showPasswordCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                passwordInput.type = 'text'; 
+            } else {
+                passwordInput.type = 'password'; 
+            }
+        });
+    </script>
 </body>
 </html>
