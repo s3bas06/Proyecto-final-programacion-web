@@ -63,10 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateCart() {
         
-        const cartTotal = document.querySelector('.cart-total');
+        /*const cartTotal = document.querySelector('.cart-total');
         const pricePerTicket = 50; 
         const totalPrice = selectedSeats.length * pricePerTicket;
-
+        */
+       
         if (cartTotal) {
             cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
         }

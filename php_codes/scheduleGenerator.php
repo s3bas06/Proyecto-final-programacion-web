@@ -46,7 +46,7 @@
         ';
         $j += 2;
     }
-    echo '<input type="hidden" name="selected_day" id="selected_day" value="">';
+    echo '<input type="hidden" name="selected_day" id="selected_day" value="2024-12-06">';
 ?>
 
 <script>
