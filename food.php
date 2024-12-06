@@ -185,7 +185,7 @@
             ?>
             </div>
             <form action="php_codes/goPay.php">
-            <button class="pay-button">Pagar</button>
+            <button class="pay-button">Siguiente</button>
             </form>
         </div>
     </main>
