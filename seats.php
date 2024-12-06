@@ -192,7 +192,7 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
                 </div>
             </div>
         </div> 
-
+        
         <div class="cart-container">
             <header class="cart-header">
               <h1>Tu carrito</h1>
@@ -246,8 +246,9 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
                 echo '<p class="grand-total">Total: <span>$'.$total_cart.'.00</span></p>';
             ?>
             </div>
-        
+            <form action="php_codes/goFood.php">
             <button class="pay-button">Pagar</button>
+            </form>
         </div>
         <script>
              const maxSeatsAllowed = <?php echo $totalTicketsAllowed; ?>;
@@ -259,7 +260,9 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
         require 'footer.php';
     ?>
     <footer class="show-cart">
-        <input type="button" value="Siguiente paso">
+        <a href="food.php">
+        <input type="button" value="Siguiente">
+        </a>
     </footer>
     <div id="session-config" data-max-seats="<?php echo htmlspecialchars($totalTicketsAllowed); ?>"></div>
     <script src="js/seats.js"></script>
