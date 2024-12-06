@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const maxSeatsAllowed = parseInt(document.getElementById('session-config').getAttribute('data-max-seats'));
     let selectedSeats = [];
-
+    const nextButton = document.querySelector('.pay-button');
+    nextButton.disabled = true;
     // Obtén todos los botones de asientos
     const seatButtons = document.querySelectorAll('.seat');
 
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (selectedSeats.length >= maxSeatsAllowed && !selectedSeats.includes(seat)) {
                 alert('Ya has alcanzado el número máximo de asientos permitidos.');
+                nextButton.disabled = false;
                 return;
             }
 
@@ -41,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Bloquea los botones si se ha alcanzado el número máximo de asientos seleccionados
             if (selectedSeats.length === maxSeatsAllowed) {
+                nextButton.disabled = false;
                 seatButtons.forEach(btn => {
                     if (!btn.classList.contains('selected') && !btn.classList.contains('reserved')) {
                         btn.disabled = true;

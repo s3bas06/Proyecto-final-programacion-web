@@ -247,7 +247,7 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
             ?>
             </div>
             <form action="php_codes/goFood.php">
-            <button class="pay-button">Pagar</button>
+            <button class="pay-button">Siguiente</button>
             </form>
         </div>
         <script>
