@@ -133,6 +133,12 @@
         require 'footer_profile.php';
     ?>
 
+    <footer class="show-cart">
+        <a href="summary.php">
+        <input type="button" value="Siguiente">
+        </a>
+    </footer>
+
     <script src="js/modal.js"></script>
     <script src="js/pay.js"></script>
     <script src="js/boton.js"></script>
