@@ -20,12 +20,12 @@
         <div class="main-information">
             <div class="information">
                 <div class="information-title"><h1>Promociones de alimentos.</h1></div>
-                <div class="information-body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum, ante vel efficitur vulputate. Sit ametdolor dolor ipsum amet</p></div>
+                <div class="information-body"><p>El mejor combo el cual puedes comprar para compartir contigo y con tu familia en esta salida al cine</p></div>
                 <div class="information-button"><button>Más información</button></div>
             </div>
 
             <div class="main-information-img">
-                <img src="assets/main-imagen-index.png">
+                <img src="food/combo3.jpg">
             </div>
         </div>
 
@@ -43,27 +43,27 @@
                 <div class="food-menu">
                     <div class="food-option">
                         <h3>Combo 1</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/combo2.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Combo 2</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/combo3.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Combo 3</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/combomediano.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Combo 4</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/combocuates.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Combo 5</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/combo5.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                 </div>
@@ -74,22 +74,22 @@
                 <div class="food-menu">
                     <div class="food-option">
                         <h3>Palomitas 1</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/palimitasmantequilla.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Palomitas 2</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/bolsa.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Palomitas 3</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/takis.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Palomitas 4</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/caramelo.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                 </div>
@@ -100,27 +100,27 @@
                 <div class="food-menu">
                     <div class="food-option">
                         <h3>Bebida 1</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/fanta.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Bebida 2</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/pepsi.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Bebida 3</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/cocacola.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Bebida 4</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/sprite.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Bebida 5</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/fantadefresa.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                 </div>
@@ -131,17 +131,17 @@
                 <div class="food-menu">
                     <div class="food-option">
                         <h3>Dulce 1</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/chocolate.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Dulce 2</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/chocolate2.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Dulce 3</h3>
-                        <img src="assets/rectangle.png" alt="">
+                        <img src="food/chocolate3.jpg" alt="">
                         <button class="combo-btn"><b>Agregar</b></button>
                     </div>
                 </div>
