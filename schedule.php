@@ -44,35 +44,28 @@
                         <option value="cine3">Cine 3</option>
                         <option value="cine4">Cine 4</option>
                     </select>
-                    <select name="ticket" id="comboBox" class="ticket">
+                    <select name="adult-tickets" id="comboBox" class="ticket">
                         <option value="" disabled selected>Boletos adulto</option>
-                        <option value="adult1">1</option>
-                        <option value="adult2">2</option>
-                        <option value="adult3">3</option>
-                        <option value="adult4">4</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
                     </select>
-                    <select name="ticket" id="comboBox" class="ticket">
+                    <select name="children-tickets" id="comboBox" class="ticket">
                         <option value="" disabled selected>Boletos niño</option>
-                        <option value="children1">1</option>
-                        <option value="children2">2</option>
-                        <option value="children3">3</option>
-                        <option value="children4">4</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
                     </select>
                 </div>
-
-
-                <?php
-                    require 'php_codes/scheduleGenerator.php';
-                ?>
-
-            </div>
-            </form>
-            <div class="button">
-                <button class="confirm-button">Confirmar</button>
-            </div>
-        </div>
-
-
+        <?php require 'php_codes/scheduleGenerator.php'; ?>
+    </div>
+    <div class="button">
+        <button type="submit" class="confirm-button">Confirmar</button>
+    </div>
+    </form>
+        
     </main>
 
     <?php

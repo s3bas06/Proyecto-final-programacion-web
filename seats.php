@@ -1,3 +1,14 @@
+<?php
+session_start();
+if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
+    $adultTickets = $_SESSION['adult_tickets'];
+    $childrenTickets = $_SESSION['children_tickets'];
+    $totalTicketsAllowed = $adultTickets + $childrenTickets;
+} else {
+    $totalTicketsAllowed = 0; // O un valor predeterminado si no hay asientos en la sesión
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -219,6 +230,11 @@
         
             <button class="pay-button">Pagar</button>
         </div>
+        <script>
+             // Pasar la variable de PHP a JavaScript
+             const maxSeatsAllowed = <?php echo $totalTicketsAllowed; ?>;
+        </script>
+        
     </main>
 
     <?php
@@ -228,7 +244,7 @@
     <footer class="show-cart">
         <input type="button" value="Siguiente paso">
     </footer>
-
+    <div id="session-config" data-max-seats="<?php echo htmlspecialchars($_SESSION['adult_tickets'] + $_SESSION['children_tickets']); ?>"></div>
     <script src="js/seats.js"></script>
 </body>
 </html>

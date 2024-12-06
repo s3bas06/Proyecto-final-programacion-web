@@ -15,7 +15,7 @@
         session_start();
         require 'header.php';
     ?>
-    
+
     <div class="welcome">
             <p>Bienvenido (Usuario)</p>
     </div>
@@ -55,6 +55,7 @@
     <?php
         require 'footer_profile.php';
     ?>
+    
 
     
 </body>

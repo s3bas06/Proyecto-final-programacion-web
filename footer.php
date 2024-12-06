@@ -16,9 +16,9 @@
         <div class="footer-content">
             <div class="goback"><a href="inicio.php">Regresar</a></div>
             <div class="social-networks">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://es-la.facebook.com/login/device-based/regular/login/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/?lang=es"><i class="fab fa-twitter"></i></a>
             </div>
             <div class="contact"><a href="mailto:">Contacto</a></div>    
         </div>

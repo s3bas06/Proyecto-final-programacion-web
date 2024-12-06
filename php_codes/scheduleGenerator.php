@@ -52,6 +52,7 @@
 <script>
 function submitDay(day) {
     document.getElementById('selected_day').value = day;
+    // Actualizar la clase de los días seleccionados (sin enviar el formulario)
     switch(day){
         case '2024-12-06':
             document.getElementById('day0').classList.add('day_select');
@@ -79,10 +80,6 @@ function submitDay(day) {
             break;
         default:
     }
-        
-    // Simula un submit del formulario con recarga
-    setTimeout(function() {
-        document.forms[0].submit(); // Esto enviará el formulario y recargará la página
-    }, 10); // Espera 500ms antes de hacer el submit
 }
+
 </script>
