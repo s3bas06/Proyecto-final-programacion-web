@@ -65,10 +65,14 @@
         border-radius: 0.5rem;
         margin: 0;
         color: white;
-
+        cursor: pointer;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+
+    .information-button button:hover{
+        background-color: #FFA500;
     }
 
     /**********************************

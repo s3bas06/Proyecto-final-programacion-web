@@ -89,7 +89,9 @@ p{
 
     .day_select{
         background-color: #FFA500;
+        cursor: pointer;
     }
+
 
     .first-combobox{
         margin-bottom: 1.5rem;
@@ -121,6 +123,7 @@ p{
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        cursor: pointer;
     }
 
 @media (max-width:1070px) {

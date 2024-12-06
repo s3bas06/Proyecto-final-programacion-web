@@ -22,7 +22,7 @@ p{
     **********************************/
 
     main{
-        background-color: #4A8BAE;
+        background-image: linear-gradient(124deg,#445259 0%, #4A8BAE 60%, #38A1D9 100%);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -72,6 +72,10 @@ p{
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+
+    .buy-button:hover{
+        background-color: #FFA500;
     }
 
     /**********************************
