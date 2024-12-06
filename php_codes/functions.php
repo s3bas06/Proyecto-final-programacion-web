@@ -71,4 +71,12 @@
             }
         }
     }
+
+    function cartDate(){
+        $date = new DateTime($_SESSION['date_function']);
+        $dia = $date->format('d');
+        $mes = $date->format('M');
+
+        echo '<p>'.$dia.' de '.$mes.', Horario.</p>';
+    }
 ?>

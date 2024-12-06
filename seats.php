@@ -25,6 +25,7 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
     
     <?php
         require 'header.php';
+        require 'php_codes/functions.php';
     ?>
     
     <main>
@@ -199,20 +200,22 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
             </header>
         
             <div class="cart-item">
-              <img src="assets/angry-birds-cart.png" alt="Angry Birds" class="movie-poster">
+                <?php
+                echo '<img src="'.searchMovie()['poster_url'].'" alt="Angry Birds" class="movie-poster">';
+                ?>
+              
               
               <div class="movie-info">
-                <h2>Angry Birds</h2>
-                <p><strong>Clasificación:</strong> A</p>
-                <p><strong>Duración:</strong> 107 min</p>
-                <p class="age-appropriate">Película apta para todo público</p>
+                <h2><?php echo searchMovie()['titulo'] ?></h2>
+                <p><strong>Clasificación:</strong> <?php echo searchMovie()['clasificacion'] ?></p>
+                <p><strong>Duración:</strong> <?php echo searchMovie()['duracion'] ?> min</p>
               </div>
             </div>
-        
+            
             <div class="cart-details">
               <h3>Cine seleccionado</h3>
               <p>Fecha y hora</p>
-              <p>Mañana, (Día) de (Mes), Horario.</p>
+              <?php cartDate();?>
               <p><strong>Asientos:</strong> Adulto (1 persona)</p>
               <p class="price">$50.00</p>
             </div>

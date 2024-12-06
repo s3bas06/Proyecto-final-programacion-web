@@ -29,8 +29,8 @@
         $isSelected = ($_SESSION['date_function'] == $dayValue) ? ' day_select' : '';  // Añadir la clase 'day_select' si la fecha es la seleccionada
     
         echo '
-        <div class="day-function" id="interface" onclick="submitDay(\'' . $dayValue . '\')">
-            <div class="day' . $isSelected . '" id="day' . $i . '">
+        <div class="day-function" id="interface">
+            <div class="day' . $isSelected . '" id="day' . $i . '" onclick="submitDay(\'' . $dayValue . '\')">
                 <p>' . $dia . ' ' . $mes . '</p>
             </div>
             
@@ -80,6 +80,11 @@ function submitDay(day) {
             break;
         default:
     }
+
+    setTimeout(function() {
+        document.forms[0].submit(); // Esto enviará el formulario y recargará la página
+    }, 10); // Espera 500ms antes de hacer el submit
+
 }
 
 </script>

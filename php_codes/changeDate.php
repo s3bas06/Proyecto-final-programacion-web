@@ -15,8 +15,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['children_tickets'] = (int)$_POST['children-tickets'];
     }
 
-    // Redirigir a la página de selección de asientose
-    header('Location:..//seats.php');
+    if(isset($_POST['children-tickets']) && isset($_POST['adult-tickets']) && isset($_POST['cine-selection'])){
+        header('Location:..//seats.php');
+    } else {
+        $day = $_POST['selected_day'];
+        $_SESSION['date_function'] = $day;
+
+        header('Cache-Control: no-cache, no-store, must-revalidate');
+        header('Pragma: no-cache');
+        header('Expires: 0');
+
+        header('Location:..//schedule.php');
+    }
     exit();
 }
 ?>
