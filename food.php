@@ -234,21 +234,21 @@
                 </div>
                 <h2>Sabor de tu refresco</h2>
                 <div class="chexkbox-container">
-                    <label for="pequeñas">
+                    <label for="CocaCola">
                         <input type="checkbox" name="pequeñas" id="">
-                        Pequeñas
+                        CocaCola
                     </label>
-                    <label for="pequeñas">
+                    <label for="Sprite">
                         <input type="checkbox" name="medianas" id="">
-                        Medianas
+                        Sprite
                     </label>
-                    <label for="pequeñas">
+                    <label for="Agua Natural">
                         <input type="checkbox" name="Grandes" id="">
-                        Grandes
+                        Agua natural
                     </label>
-                    <label for="pequeñas">
+                    <label for="Fanta">
                         <input type="checkbox" name="Grandes" id="">
-                        Para llevar
+                        Fanta
                     </label>
                 </div>
             </div>

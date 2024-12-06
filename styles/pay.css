@@ -12,6 +12,14 @@ p{
     color: white;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
     /**********************************
 
     Estilos del contenido principal
@@ -19,13 +27,14 @@ p{
     **********************************/
 
     main{
-        background-color: #4A8BAE;
+        background-image: linear-gradient(124deg,#445259 0%, #4A8BAE 60%, #38A1D9 100%);
         display: flex;
         flex-direction: row;
         align-items:flex-start;
         justify-content: center;
         padding: 1.3vh 0;
         gap: 10vw;
+        min-height: calc(100vh - 100px);
     }
 
     /**********************************
