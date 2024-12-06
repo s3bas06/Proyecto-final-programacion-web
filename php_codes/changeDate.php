@@ -1,17 +1,22 @@
 <?php
-session_start(); // Asegúrate de que la sesión esté iniciada
+session_start();
 
+// Verificar si los datos han sido enviados y asignarlos a la sesión
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $day = $_POST['selected_day'];
-    $_SESSION['date_function'] = $day;
+    if (isset($_POST['cine-selection'])) {
+        $_SESSION['selected_cine'] = $_POST['cine-selection'];
+    }
 
-    // Evitar cacheo
-    header('Cache-Control: no-cache, no-store, must-revalidate');
-    header('Pragma: no-cache');
-    header('Expires: 0');
+    if (isset($_POST['adult-tickets'])) {
+        $_SESSION['adult_tickets'] = (int)$_POST['adult-tickets'];
+    }
 
-    // Redirigir a schedule.php
-    header('Location:..//schedule.php');
-    exit(); // Asegúrate de salir después de redirigir
+    if (isset($_POST['children-tickets'])) {
+        $_SESSION['children_tickets'] = (int)$_POST['children-tickets'];
+    }
+
+    // Redirigir a la página de selección de asientose
+    header('Location:..//seats.php');
+    exit();
 }
 ?>
