@@ -216,8 +216,14 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
               <h3>Cine seleccionado</h3>
               <p>Fecha y hora</p>
               <?php cartDate();?>
-              <p><strong>Asientos:</strong> Adulto (1 persona)</p>
-              <p class="price">$50.00</p>
+              <?php
+                echo '<p><strong>Asientos:</strong><br>Adulto ('.$_SESSION['adult_tickets'].')<br> Niños ('.$_SESSION['children_tickets'].')</p>';
+                
+                $price = ($_SESSION['adult_tickets'] * 75) + ($_SESSION['children_tickets'] * 50);
+                
+                echo '<p class="price">$'.$price.'.00</p>';
+                $_SESSION['subtotal'] = $price;
+              ?>
             </div>
         
             <div class="food-section">
@@ -226,9 +232,12 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
             </div>
         
             <div class="totals">
-              <p>Subtotal: <span>$50.00</span></p>
-              <p>Cargo por servicio: <span>$8.00</span></p>
-              <p class="grand-total">Total: <span>$58.00</span></p>
+            <?php
+                echo '<p>Subtotal: <span>$'.$_SESSION['subtotal'].'.00</span></p>';
+                $service = 8;
+                echo '<p>Cargo por servicio: <span>$'.$service.'.00</span></p>';
+                echo '<p class="grand-total">Total: <span>$'.$service + $_SESSION['subtotal'].'.00</span></p>';
+            ?>
             </div>
         
             <button class="pay-button">Pagar</button>
