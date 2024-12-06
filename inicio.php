@@ -20,13 +20,13 @@
     <main>
         <div class="main-information">
             <div class="information">
-                <div class="information-title"><h1>Lorem ipsum dolor sit amet.</h1></div>
-                <div class="information-body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum, ante vel efficitur vulputate. Sit ametdolor dolor ipsum amet</p></div>
+                <div class="information-title"><h1>La sociedad de la nieve</h1></div>
+                <div class="information-body"><p>Inspirada en la historia real del accidente aéreo del vuelo 571 de la Fuerza Aérea Uruguaya en los Andes en 1972</p></div>
                 <div class="information-button"><button>Más información</button></div>
             </div>
 
             <div class="main-information-img">
-                <img src="assets/main-imagen-index.png">
+                <img src="assets/sociedaddelanieve-poster.jpg">
             </div>
         </div>
 
