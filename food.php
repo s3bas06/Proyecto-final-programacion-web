@@ -184,7 +184,7 @@
                 echo '<p class="grand-total">Total: <span>$'.$total_cart.'.00</span></p>';
             ?>
             </div>
-            <form action="php_codes/goFood.php">
+            <form action="php_codes/goPay.php">
             <button class="pay-button">Pagar</button>
             </form>
         </div>

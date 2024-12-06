@@ -14,6 +14,8 @@
 
     <?php
         require 'header.php';
+        require 'php_codes/functions.php';
+        session_start();
     ?>
     
     <main>
@@ -46,26 +48,40 @@
         <div class="cart-container">
             <header class="cart-header">
               <h1>Tu carrito</h1>
-              <span class="cart-total">$50.00</span>
+              <?php
+              $price = ($_SESSION['adult_tickets'] * 75) + ($_SESSION['children_tickets'] * 50);
+              $_SESSION['subtotal'] = $price;
+              $service = 8;
+              $total_cart = $service + $_SESSION['subtotal'];
+              echo '<span class="cart-total">$'.$total_cart.'.00</span>';
+              ?>
             </header>
         
             <div class="cart-item">
-              <img src="assets/angry-birds-cart.png" alt="Angry Birds" class="movie-poster">
+                <?php
+                echo '<img src="'.searchMovie()['poster_url'].'" alt="Angry Birds" class="movie-poster">';
+                ?>
+              
               
               <div class="movie-info">
-                <h2>Angry Birds</h2>
-                <p><strong>Clasificación:</strong> A</p>
-                <p><strong>Duración:</strong> 107 min</p>
-                <p class="age-appropriate">Película apta para todo público</p>
+                <h2><?php echo searchMovie()['titulo'] ?></h2>
+                <p><strong>Clasificación:</strong> <?php echo searchMovie()['clasificacion'] ?></p>
+                <p><strong>Duración:</strong> <?php echo searchMovie()['duracion'] ?> min</p>
               </div>
             </div>
-        
+            
             <div class="cart-details">
               <h3>Cine seleccionado</h3>
               <p>Fecha y hora</p>
-              <p>Mañana, (Día) de (Mes), Horario.</p>
-              <p><strong>Asientos:</strong> Adulto (1 persona)</p>
-              <p class="price">$50.00</p>
+              <?php cartDate();?>
+              <?php
+                echo '<p><strong>Asientos:</strong><br>Adulto ('.$_SESSION['adult_tickets'].')<br> Niños ('.$_SESSION['children_tickets'].')</p>';
+                
+                $price = ($_SESSION['adult_tickets'] * 75) + ($_SESSION['children_tickets'] * 50);
+                
+                echo '<p class="price">$'.$price.'.00</p>';
+                
+              ?>
             </div>
         
             <div class="food-section">
@@ -74,13 +90,18 @@
             </div>
         
             <div class="totals">
-              <p>Subtotal: <span>$50.00</span></p>
-              <p>Cargo por servicio: <span>$8.00</span></p>
-              <p class="grand-total">Total: <span>$58.00</span></p>
+            <?php
+                echo '<p>Subtotal: <span>$'.$_SESSION['subtotal'].'.00</span></p>';
+                $service = 8;
+                $total_cart = $service + $_SESSION['subtotal'];
+                echo '<p>Cargo por servicio: <span>$'.$service.'.00</span></p>';
+                echo '<p class="grand-total">Total: <span>$'.$total_cart.'.00</span></p>';
+            ?>
             </div>
-        
+            <form action="php_codes/goSummary.php">
             <button class="pay-button">Pagar</button>
-          </div>
+            </form>
+        </div>
     </main>
 
     <section class="modal">
