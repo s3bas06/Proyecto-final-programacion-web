@@ -1,30 +1,36 @@
 <?php
-    session_start();
-    require_once('database.php');
-    
-    if(!$_SERVER['REQUEST_METHOD'] === "POST"){
-        echo "no jalo";
-    } else {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $email = $_POST['email'];
-        $confirmPassword = $_POST['confirmPassword'];
-        
-        if($password === $confirmPassword){
-            $db = new Database();
-            $pdo = $db->getConnection();
-            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-            $query = "INSERT INTO usuarios (username, password, email) VALUES (:username, :password, :email)";
+require_once('database.php');
 
-            $stmt = $pdo->prepare($query);
-            $stmt->bindValue(':username', $username);
-            $stmt->bindValue(':password', $hashedPassword);
-            $stmt->bindValue(':email', $email);
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('location:register-form.php?status=3'); // Método inválido
+    exit();
+}
 
-            $stmt->execute();
-            header('location:login.php');
-        } else{
-            header('location:register_form.php?status=3');
-        }
-    }
+if (empty($_POST['email']) || empty($_POST['username']) || empty($_POST['password']) || empty($_POST['confirmPassword'])) {
+    header('location:register-form.php?status=1'); // Campos incompletos
+    exit();
+}
+
+if ($_POST['password'] !== $_POST['confirmPassword']) {
+    header('location:register-form.php?status=2'); // Contraseñas no coinciden
+    exit();
+}
+
+$email = $_POST['email'];
+$username = $_POST['username'];
+$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+
+$db = new Database();
+$pdo = $db->getConnection();
+$query = "INSERT INTO usuarios (email, username, password) VALUES (:email, :username, :password)";
+$stmt = $pdo->prepare($query);
+$stmt->bindValue(':email', $email);
+$stmt->bindValue(':username', $username);
+$stmt->bindValue(':password', $password);
+
+if ($stmt->execute()) {
+    header('location:login.php?status=0'); // Registro exitoso
+} else {
+    header('location:register-form.php?status=4'); // Error al registrar
+}
 ?>
