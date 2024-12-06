@@ -231,7 +231,6 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
             <button class="pay-button">Pagar</button>
         </div>
         <script>
-             // Pasar la variable de PHP a JavaScript
              const maxSeatsAllowed = <?php echo $totalTicketsAllowed; ?>;
         </script>
         
