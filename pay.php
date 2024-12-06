@@ -139,6 +139,10 @@
         </a>
     </footer>
 
+    <script>
+
+</script>
+
     <script src="js/modal.js"></script>
     <script src="js/pay.js"></script>
     <script src="js/boton.js"></script>
