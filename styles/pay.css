@@ -46,11 +46,36 @@ body, html {
     .pay-section{
         margin-top: 7rem;
         min-width: 45%;
-        min-height: 20rem;
-        background-color: white;
+        min-height: 24rem;
+        background-color: rgb(198, 194, 194);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         border-radius: 2%;
     }
 
+    .personal-data input[type="text"] {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #333;
+        background-color: #fdfdfd;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .personal-data input[type="text"]:hover {
+        border-color: #4A90E2;
+    }
+    
+    .personal-data input[type="text"]:focus {
+        border-color: #4A90E2;
+        box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
+        outline: none;
+    }
+    
+    .personal-data input[type="text"]::placeholder {
+        color: #999;
+        font-style: italic;
+    }
 
     .do-pay {
         display: flex;
@@ -78,23 +103,23 @@ body, html {
           font-weight: bold;
           text-transform: uppercase;
           cursor: pointer;
-          background-color: #FF6A13; /* Color sólido naranja pastel */
+          background-color: #FF6A13; 
           color: white;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-          margin-bottom: 10px; /* Separación entre botones */
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+          margin-bottom: 10px; 
       }
   
       .pay-method input[type="button"]:hover {
-          background-color: #FF4500; /* Color más oscuro al pasar el mouse */
+          background-color: #FF4500; 
       }
   
       .pay-method input[type="button"]:active {
-          background-color: #FF4500; /* Color sólido cuando se hace clic */
+          background-color: #FF4500; 
       }
   
       .pay-method input[type="button"]:focus {
-          outline: none; /* Eliminar contorno predeterminado */
-          box-shadow: 0 0 0 3px rgba(255, 106, 19, 0.5); /* Sombra al hacer foco */
+          outline: none; 
+          box-shadow: 0 0 0 3px rgba(255, 106, 19, 0.5); 
       }
       .do-pay button:hover {
         background-color: #e69500; 
@@ -112,6 +137,10 @@ body, html {
     .personal-data{
         display: flex;
         gap: 2rem;
+    }
+
+    .pay-content h2{
+        text-align: center;
     }
 
     .personal-data input{
