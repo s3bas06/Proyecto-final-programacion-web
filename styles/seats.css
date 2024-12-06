@@ -1,289 +1,275 @@
-*{
+/* Estilos generales */
+* {
     padding: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
 
-h1 {
+h1, p {
     color: white;
 }
 
-p{
-    color: white;
+/* Estilos para el contenedor principal */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-    /**********************************
+main {
+    flex: 1; 
+}
 
+/**********************************
     Estilos del contenido principal
-    
-    **********************************/
-
-    main{
-        background-image: linear-gradient(124deg,#445259 0%, #4A8BAE 60%, #38A1D9 100%);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 1.3vh 0;
-        
-    }
-
-    /**********************************
-
-    Estilos del la seleccion de asientos
-    
-    **********************************/
-
-    .seats-section{
-        max-width: 70%;
-    }
-    .seats-title{
-        text-align: center;
-    }
-    .cinema {
-        text-align: center;
-    }
-    
-    .screen {
-        margin: 20px auto;
-        padding: 10px;
-        background-color: #ffffff;
-        color:#002438;
-        width: 50%;
-        border-radius: 5px;
-    }
-    
-    .row {
-        display: flex;
-        justify-content: center;
-        margin: 5px 0;
-    }
-
-    .row-name {
-        width: 40px;
-        height: 40px;
-        margin: 5px;
-        border: 1px solid #000000;
-        border-radius: 5px;
-        
-        /*Estilos del contenido*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 40px;
-        height: 40px;
-        background-color: #002438;
-        color: white;
-    }
-    
-    .seat {
-        width: 40px;
-        height: 40px;
-        margin: 5px;
-        background-color: white;
-        border: 1px solid #999;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    
-    .seat.selected {
-        background-color: #38A1D9;
-    }
-    
-    .seat.reserved {
-        background-color: #242E33;
-        color:#445259;
-        cursor: not-allowed;
-    }
-    
-    .seat:hover:not(.reserved) {
-        background-color: #ddd;
-    }
-
-    /**********************************
-
-    Estilos del  carrito de compras
-    
-    **********************************/
-    .cart-container {
-        width: 90%;
-        max-width: 400px;
-        background-color: #fff;
-        border-radius: 1rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-    }
-      
-    .cart-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #2c5066;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 8px 8px 0 0;
-    }
-        
-    .cart-header h1 {
-        margin: 0;
-        font-size: 1.5rem;
-    }
-        
-    .cart-total {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-        
-    .cart-item {
-        display: flex;
-        margin-top: 1.25rem;
-        padding: 0 0.75rem;
-        align-items: center;
-    }
-        
-    .movie-poster {
-        width: 80px;
-        border-radius: 4px;
-        margin-right: 10px;
-    }
-        
-    .movie-info h2 {
-        margin: 0;
-        font-size: 16px;
-        color: #002438;
-    }
-        
-    .movie-info p {
-        margin: 5px 0;
-        font-size: 14px;
-        color: #002438;
-    }
-        
-    .age-appropriate {
-        color: #2c5066;
-        font-weight: bold;
-    }
-        
-    .cart-details {
-        margin-top: 20px;
-        padding: 0 0.75rem;
-    }
-        
-    .cart-details h3 {
-        margin: 0;
-        font-size: 16px;
-        color: #002438;
-    }
-        
-    .cart-details p {
-        font-size: 14px;
-        margin: 5px 0;
-        color: #002438;
-    }
-        
-    .price {
-        text-align: right;
-        font-weight: bold;
-    }
-        
-    .food-section {
-        margin-top: 20px;
-        padding: 0 0.75rem;
-    }
-        
-    .food-section h3 {
-        margin: 0;
-        font-size: 16px;
-        color: #002438;
-    }
-        
-    .food-section p {
-        font-size: 14px;
-        color: #888;
-    }
-        
-    .totals {
-        margin-top: 20px;
-        padding: 0 0.75rem;
-    }
-        
-    .totals p {
-        display: flex;
-        justify-content: space-between;
-        margin: 5px 0;
-        font-size: 14px;
-        color: #002438;
-    }
-        
-    .grand-total {
-        font-size: 16px;
-        font-weight: bold;
-        color: #2c5066;
-    }
-        
-    .pay-button {
-        display: block;
-        width: 100%;
-        background-color: #FFA500;
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-        text-align: center;
-        padding: 10px;
-        margin-top: 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-        
-    .pay-button:hover {
-        background-color: #ffa500;
-    }
-
-
-    /**********************************
-
-    Estilo del footer
-    
-    **********************************/
-    .show-cart{
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #002244;
-        color: #fff;
-        text-align: center;
-        padding: 15px;
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-        opacity:0;
-    }
-
-    .show-cart input{
-        width: 50%;
-        height: 2rem;
-        background-color: #FFA500;
-        border-radius: 10px;
-        font-size: 1.5rem;
-    }
-
-@media (max-width:320px) {
-
+**********************************/
+main {
+    background-image: linear-gradient(124deg, #445259 0%, #4A8BAE 60%, #38A1D9 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.3vh 0;
 }
 
-@media (max-width:768px) {
-    .cart-container{
-        display: none;
-        z-index: 0;
+/**********************************
+    Estilos de la selección de asientos
+**********************************/
+.seats-section {
+    max-width: 70%;
+}
+
+.seats-title {
+    text-align: center;
+}
+
+.cinema {
+    text-align: center;
+}
+
+.screen {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #002438;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.row-name {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #002438;
+    color: white;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: white;
+    border: 1px solid #999;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.seat.selected {
+    background-color: #38A1D9;
+}
+
+.seat.reserved {
+    background-color: #242E33;
+    color: #445259;
+    cursor: not-allowed;
+}
+
+.seat:hover:not(.reserved) {
+    background-color: #ddd;
+}
+
+/**********************************
+    Estilos del carrito de compras
+**********************************/
+.cart-container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c5066;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.cart-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.cart-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cart-item {
+    display: flex;
+    margin-top: 1.25rem;
+    padding: 0 0.75rem;
+    align-items: center;
+}
+
+.movie-poster {
+    width: 80px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.movie-info h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #002438;
+}
+
+.movie-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #002438;
+}
+
+.age-appropriate {
+    color: #2c5066;
+    font-weight: bold;
+}
+
+.cart-details {
+    margin-top: 20px;
+    padding: 0 0.75rem;
+}
+
+.cart-details h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #002438;
+}
+
+.cart-details p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #002438;
+}
+
+.price {
+    text-align: right;
+    font-weight: bold;
+}
+
+.food-section {
+    margin-top: 20px;
+    padding: 0 0.75rem;
+}
+
+.food-section h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #002438;
+}
+
+.food-section p {
+    font-size: 14px;
+    color: #888;
+}
+
+.totals {
+    margin-top: 20px;
+    padding: 0 0.75rem;
+}
+
+.totals p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #002438;
+}
+
+.grand-total {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c5066;
+}
+
+.pay-button {
+    display: block;
+    width: 100%;
+    background-color: #FFA500;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pay-button:hover {
+    background-color: #ffa500;
+}
+
+/**********************************
+    Estilo del footer
+**********************************/
+.show-cart {
+    margin-top: auto; 
+    width: 100%;
+    background-color: #002244;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de la entrada de botón en el footer */
+.show-cart input {
+    width: 50%;
+    height: 2rem;
+    background-color: #FFA500;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    display: none; 
+}
+
+
+@media (max-width: 768px) {
+    .cart-container {
+        display: none; 
     }
 
-    .seats-section{
-        max-width: 100%;
-    }
-
-    .show-cart{
-        position: sticky;
-        opacity: 1;
+    .show-cart input {
+        display: block; 
     }
 }

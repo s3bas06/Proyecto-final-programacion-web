@@ -240,11 +240,10 @@ if (isset($_SESSION['adult_tickets']) && isset($_SESSION['children_tickets'])) {
     <?php
         require 'footer.php';
     ?>
-
     <footer class="show-cart">
         <input type="button" value="Siguiente paso">
     </footer>
-    <div id="session-config" data-max-seats="<?php echo htmlspecialchars($_SESSION['adult_tickets'] + $_SESSION['children_tickets']); ?>"></div>
+    <div id="session-config" data-max-seats="<?php echo htmlspecialchars($totalTicketsAllowed); ?>"></div>
     <script src="js/seats.js"></script>
 </body>
 </html>
