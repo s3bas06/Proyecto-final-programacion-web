@@ -9,12 +9,12 @@
 <body>
     <div class="login-container">
         <h2 class="login-title">Inicio de Sesión</h2>
-        <form id="login-form" action="php_codes/login-action.php" method="POST">
+        <form id="login-form">
             <div class="input-group">
-                <input type="email" id="email" placeholder="Email" name="email">
+                <input type="email" id="email" placeholder="Email" name="email" required>
             </div>
             <div class="input-group">
-                <input type="password" id="password" placeholder="Contraseña" name="password">
+                <input type="password" id="password" placeholder="Contraseña" name="password" required>
             </div>
             <div class="checkbox-group">
                 <input type="checkbox" id="show-password">
@@ -36,24 +36,35 @@
         });
 
         document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
             const email = document.getElementById('email').value.trim();
             const password = document.getElementById('password').value.trim();
 
             if (!email || !password) {
-                event.preventDefault();
                 alert('Por favor, completa todos los campos.');
+                return;
             }
+
+            fetch('php_codes/login-action.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = 'inicio.php';
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Email o contraseña incorrectos.');
+            });
         });
-
-        // Mostrar alertas basadas en el parámetro "status"
-        const urlParams = new URLSearchParams(window.location.search);
-        const status = urlParams.get('status');
-
-        if (status === '1') {
-            alert('Por favor, completa todos los campos.');
-        } else if (status === '3') {
-            alert('Las credenciales ingresadas no son correctas. Por favor, inténtalo de nuevo.');
-        }
     </script>
 </body>
 </html>
