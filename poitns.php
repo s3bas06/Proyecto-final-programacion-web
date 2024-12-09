@@ -51,6 +51,9 @@
                 <a href=""><p>Puntos</p></a>     
                 <img src="assets/Line 1.png" alt="">
                 <a href="history.php"><p>Historial</p></a>
+                <form action="php_codes/logout.php">
+                <button class ="btn-logout">Cerrar sesion</button>
+                </form>
             </div>
         </div> 
         <div class="points">
@@ -69,7 +72,7 @@
     <div class="return">
         <a href="inicio.php"><p>volver</p></a>
     </div>
-
+    
     <?php
         require 'footer_profile.php';
     ?>

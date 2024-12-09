@@ -25,6 +25,9 @@
                 <a href="poitns.php"><p>Puntos</p></a>     
                 <a href=""><p>Historial</p></a>
                 <img src="assets/Line 1.png" alt="">
+                <form action="php_codes/logout.php">
+                <button class ="btn-logout">Cerrar sesion</button>
+                </form>
             </div>
         </div> 
         <div class="movies">
