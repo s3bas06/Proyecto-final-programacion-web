@@ -75,6 +75,6 @@ if (!$user) {
         <a href="inicio.php"><p>volver</p></a>
     </div>
 
-    <?php require 'footer.php'; ?>
+    <?php require 'footer_profile.php'; ?>
 </body>
 </html>

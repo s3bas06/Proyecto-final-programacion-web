@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2024 a las 02:08:34
+-- Tiempo de generación: 09-12-2024 a las 22:22:57
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -40,7 +40,6 @@ CREATE TABLE `funciones` (
 --
 
 INSERT INTO `funciones` (`id_funcion`, `id_pelicula`, `fecha`, `hora`, `sala`) VALUES
--- --------------------------------------------------------pelicula1
 (1, 1, '2024-12-06', '10:00:00', 'Sala 1'),
 (2, 1, '2024-12-06', '12:30:00', 'Sala 1'),
 (3, 1, '2024-12-06', '15:00:00', 'Sala 1'),
@@ -73,7 +72,6 @@ INSERT INTO `funciones` (`id_funcion`, `id_pelicula`, `fecha`, `hora`, `sala`) V
 (30, 1, '2024-12-09', '22:30:00', 'Sala 1'),
 (31, 1, '2024-12-09', '00:30:00', 'Sala 1'),
 (32, 1, '2024-12-09', '02:30:00', 'Sala 1'),
--- --------------------------------------------------------pelicula2
 (33, 2, '2024-12-06', '10:00:00', 'Sala 1'),
 (34, 2, '2024-12-06', '12:30:00', 'Sala 1'),
 (35, 2, '2024-12-06', '15:00:00', 'Sala 1'),
@@ -106,7 +104,6 @@ INSERT INTO `funciones` (`id_funcion`, `id_pelicula`, `fecha`, `hora`, `sala`) V
 (62, 2, '2024-12-09', '22:30:00', 'Sala 1'),
 (63, 2, '2024-12-09', '00:30:00', 'Sala 1'),
 (64, 2, '2024-12-09', '02:30:00', 'Sala 1'),
--- --------------------------------------------------------pelicula3
 (65, 3, '2024-12-06', '10:00:00', 'Sala 1'),
 (66, 3, '2024-12-06', '12:30:00', 'Sala 1'),
 (67, 3, '2024-12-06', '15:00:00', 'Sala 1'),
@@ -139,7 +136,6 @@ INSERT INTO `funciones` (`id_funcion`, `id_pelicula`, `fecha`, `hora`, `sala`) V
 (94, 3, '2024-12-09', '22:30:00', 'Sala 1'),
 (95, 3, '2024-12-09', '00:30:00', 'Sala 1'),
 (96, 3, '2024-12-09', '02:30:00', 'Sala 1'),
--- --------------------------------------------------------pelicula4
 (97, 4, '2024-12-06', '10:00:00', 'Sala 1'),
 (98, 4, '2024-12-06', '12:30:00', 'Sala 1'),
 (99, 4, '2024-12-06', '15:00:00', 'Sala 1'),
@@ -172,7 +168,6 @@ INSERT INTO `funciones` (`id_funcion`, `id_pelicula`, `fecha`, `hora`, `sala`) V
 (126, 4, '2024-12-09', '22:30:00', 'Sala 1'),
 (127, 4, '2024-12-09', '00:30:00', 'Sala 1'),
 (128, 4, '2024-12-09', '02:30:00', 'Sala 1'),
--- --------------------------------------------------------pelicula5
 (129, 5, '2024-12-06', '10:00:00', 'Sala 1'),
 (130, 5, '2024-12-06', '12:30:00', 'Sala 1'),
 (131, 5, '2024-12-06', '15:00:00', 'Sala 1'),
@@ -205,7 +200,6 @@ INSERT INTO `funciones` (`id_funcion`, `id_pelicula`, `fecha`, `hora`, `sala`) V
 (158, 5, '2024-12-09', '22:30:00', 'Sala 1'),
 (159, 5, '2024-12-09', '00:30:00', 'Sala 1'),
 (160, 5, '2024-12-09', '02:30:00', 'Sala 1'),
--- --------------------------------------------------------pelicula6
 (161, 6, '2024-12-06', '10:00:00', 'Sala 1'),
 (162, 6, '2024-12-06', '12:30:00', 'Sala 1'),
 (163, 6, '2024-12-06', '15:00:00', 'Sala 1'),
@@ -238,7 +232,6 @@ INSERT INTO `funciones` (`id_funcion`, `id_pelicula`, `fecha`, `hora`, `sala`) V
 (190, 6, '2024-12-09', '22:30:00', 'Sala 1'),
 (191, 6, '2024-12-09', '00:30:00', 'Sala 1'),
 (192, 6, '2024-12-09', '02:30:00', 'Sala 1'),
--- --------------------------------------------------------pelicula7
 (193, 7, '2024-12-06', '10:00:00', 'Sala 1'),
 (194, 7, '2024-12-06', '12:30:00', 'Sala 1'),
 (195, 7, '2024-12-06', '15:00:00', 'Sala 1'),
@@ -271,7 +264,6 @@ INSERT INTO `funciones` (`id_funcion`, `id_pelicula`, `fecha`, `hora`, `sala`) V
 (222, 7, '2024-12-09', '22:30:00', 'Sala 1'),
 (223, 7, '2024-12-09', '00:30:00', 'Sala 1'),
 (224, 7, '2024-12-09', '02:30:00', 'Sala 1'),
--- --------------------------------------------------------pelicula8
 (225, 8, '2024-12-06', '10:00:00', 'Sala 1'),
 (226, 8, '2024-12-06', '12:30:00', 'Sala 1'),
 (227, 8, '2024-12-06', '15:00:00', 'Sala 1'),
@@ -304,7 +296,6 @@ INSERT INTO `funciones` (`id_funcion`, `id_pelicula`, `fecha`, `hora`, `sala`) V
 (254, 8, '2024-12-09', '22:30:00', 'Sala 1'),
 (255, 8, '2024-12-09', '00:30:00', 'Sala 1'),
 (256, 8, '2024-12-09', '02:30:00', 'Sala 1'),
--- --------------------------------------------------------pelicula9
 (257, 9, '2024-12-06', '10:00:00', 'Sala 1'),
 (258, 9, '2024-12-06', '12:30:00', 'Sala 1'),
 (259, 9, '2024-12-06', '15:00:00', 'Sala 1'),
@@ -337,7 +328,6 @@ INSERT INTO `funciones` (`id_funcion`, `id_pelicula`, `fecha`, `hora`, `sala`) V
 (286, 9, '2024-12-09', '22:30:00', 'Sala 1'),
 (287, 9, '2024-12-09', '00:30:00', 'Sala 1'),
 (288, 9, '2024-12-09', '02:30:00', 'Sala 1'),
--- --------------------------------------------------------pelicula10
 (289, 10, '2024-12-06', '10:00:00', 'Sala 1'),
 (290, 10, '2024-12-06', '12:30:00', 'Sala 1'),
 (291, 10, '2024-12-06', '15:00:00', 'Sala 1'),
@@ -413,22 +403,31 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` char(60) NOT NULL,
-  `email` varchar(30) NOT NULL
+  `email` varchar(30) NOT NULL,
+  `points` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `username`, `password`, `email`) VALUES
-(1, 'fgdasgda', '123', 'fafas@fafa.com'),
-(3, 's0bas', '$2y$10$QMofRQZ38EukFeaPTbiy8ejKsCZJIzJpi9lgKhhyU.ldvdEjYzsKO', 'sebas@hotmail.com'),
-(4, 'dani', '$2y$10$SUqb0pCELDMrQMLtopd2TeSt.f1VdX/pDMhZlcyBoldLsMYdlnPQm', 'daniel@hotmail.com'),
-(5, 'elsebas', '$2y$10$e42T6Dd53fWetrwD.xA9uu8mhS8osSB/TlTDBnMr40XdOiZ1LY8aq', 'sebastian@gmail.com'),
-(7, '4io21jio4j12', '$2y$10$U97dVZCnEs4ZAIsTZ/hLSeczh35CSs5vUeUtKeRUmpDWHVeTNjBNW', 'seb904u12904us@hotmail.com'),
-(8, 'sebastianorantes', '$2y$10$49bPfQ4rK/MSUqUTibaneuE.EsgZzJ4FfHT37J0BFpQOVZKkhlpci', 'sebastianoa11@hotmail.com'),
-(9, 'fasdfafaf', '$2y$10$rGvGRifvXMcK9C93UtgP8O.5Z0xX2CM1PJCqC47svhNRh/1SbWa4G', 'sfafaf@hotmial.com'),
-(10, 'rqrqrrqrqrq', '$2y$10$cTPI2VP9wZLOY0Vy4HUaNuxHKAy4Yj5BcVPDatg2R8W9uJBP1bLhq', 'da767676niel@hotmail.com');
+INSERT INTO `usuarios` (`id`, `username`, `password`, `email`, `points`) VALUES
+(1, 'fgdasgda', '123', 'fafas@fafa.com', 0),
+(3, 's0bas', '$2y$10$QMofRQZ38EukFeaPTbiy8ejKsCZJIzJpi9lgKhhyU.ldvdEjYzsKO', 'sebas@hotmail.com', 0),
+(4, 'dani', '$2y$10$SUqb0pCELDMrQMLtopd2TeSt.f1VdX/pDMhZlcyBoldLsMYdlnPQm', 'daniel@hotmail.com', 0),
+(5, 'elsebas', '$2y$10$e42T6Dd53fWetrwD.xA9uu8mhS8osSB/TlTDBnMr40XdOiZ1LY8aq', 'sebastian@gmail.com', 0),
+(7, '4io21jio4j12', '$2y$10$U97dVZCnEs4ZAIsTZ/hLSeczh35CSs5vUeUtKeRUmpDWHVeTNjBNW', 'seb904u12904us@hotmail.com', 0),
+(8, 'sebastianorantes', '$2y$10$49bPfQ4rK/MSUqUTibaneuE.EsgZzJ4FfHT37J0BFpQOVZKkhlpci', 'sebastianoa11@hotmail.com', 0),
+(9, 'fasdfafaf', '$2y$10$rGvGRifvXMcK9C93UtgP8O.5Z0xX2CM1PJCqC47svhNRh/1SbWa4G', 'sfafaf@hotmial.com', 0),
+(10, 'rqrqrrqrqrq', '$2y$10$cTPI2VP9wZLOY0Vy4HUaNuxHKAy4Yj5BcVPDatg2R8W9uJBP1bLhq', 'da767676niel@hotmail.com', 0),
+(11, '3cm', '$2y$10$c4b1cSLdKC0pg0VH8t8HCeiqVF5u9g4yQy1uuXHru0st9Sw2FDmey', 'daniputo@gmail.com', 0),
+(12, '', '$2y$10$pl3viECuJOVVrGbExeMe4eEg8DmH5PnzIDABpunlMsr7U4EHYlggm', '', 0),
+(13, 'fafafa', '$2y$10$LZSxUOOcXRm1L.mEkszPse/Hlm7ZiGRK1xIpkQT0paInFUXrOcmRy', 'affsfs@gmail.com', 0),
+(14, 'hola', '$2y$10$JsqKRUvdPiekBEE2SvVS8.nZ.4ZCKKWYB9MVaSdDth0dy.MPSPDfS', 'hola@gmail.com', 0),
+(15, 'fiol', '$2y$10$WegWA53vstkthjwH7K0xe.9d.HY28OzoXKdz8YmyMkJVOMuhz.1iO', 'fiol@gmail.com', 3),
+(17, 'sdsd', '$2y$10$O/iv2S01pQB1JkzonY1T/e9oXzTVUPLrMofdhD8iYOvilrDlDikcy', 'dsdsds@gmail.com', 0),
+(18, 'w2', '$2y$10$.RdDodYvqbo3IMX/Z2pZXeMLyCaRUM9tJ.r1gohhtmj68NS3PXT6S', 'messi@gmail.com', 0),
+(19, 'Daniel', '$2y$10$THzvOilAL4J0z8uCT4FnTOU0u9JlhnlBeI4aFoAjuLLpRHnIx6CKS', 'daniel@gmail.com', 0);
 
 --
 -- Índices para tablas volcadas
@@ -462,7 +461,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `funciones`
 --
 ALTER TABLE `funciones`
-  MODIFY `id_funcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
+  MODIFY `id_funcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=321;
 
 --
 -- AUTO_INCREMENT de la tabla `peliculas`
@@ -474,7 +473,7 @@ ALTER TABLE `peliculas`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restricciones para tablas volcadas
