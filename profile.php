@@ -45,6 +45,9 @@ if (!$user) {
                 <img src="assets/Line 1.png" alt="">
                 <a href="poitns.php"><p>Puntos</p></a>     
                 <a href="history.php"><p>Historial</p></a>
+                <form action="php_codes/logout.php">
+                <button class ="btn-logout">Cerrar sesion</button>
+                </form>
             </div>
         </div>  
         <div class="container-dates">
@@ -62,12 +65,11 @@ if (!$user) {
                 <p>Contraseña:</p>
                 <p class="password">***********</p>             
             </div>
+            
         </div>     
     </div>
 
-    <form action="php_codes/logout.php">
-    <button>Cerrar sesion</button>
-    </form>
+
 
     <div class="return">
         <a href="inicio.php"><p>volver</p></a>
