@@ -29,9 +29,9 @@
                     <h2 >Datos personales</h2>
                     <br>
                     <div class="personal-data">
-                        <input type="text" name="names" id="" placeholder="Nombre(s)">
-                        <input type="text" name="lastname1" id="" placeholder="Apellido paterno">
-                        <input type="text" name="lastname2" id="" placeholder="Apellido materno">
+                    <input type="text" name="first-name" placeholder="Nombre(s)" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
+                    <input type="text" name="last-name" placeholder="Apellido paterno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
+                    <input type="text" name="second-last-name" placeholder="Apellido materno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
                     </div>
                     <h2>Método de pago</h2>
                     <br>
@@ -114,16 +114,16 @@
             <div class="food-details">
                 <h2>Datos de la persona</h2>
                 <div class="chexkbox-container">
-                      <input type="text" name="names" id="" placeholder="Nombre(s)">
-                      <input type="text" name="names" id="" placeholder="Apellido paterno">
-                      <input type="text" name="names" id="" placeholder="Apellido materno">
+                    <input type="text" name="first-name" placeholder="Nombre(s)" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
+                    <input type="text" name="last-name" placeholder="Apellido paterno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
+                    <input type="text" name="second-last-name" placeholder="Apellido materno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
                 </div>
                 
                 <h2>Datos de la tarjeta</h2>
                 <div class="chexkbox-container">
-                    <input type="text" name="names" id="" placeholder="No. de tarjeta">
-                    <input type="text" name="names" id="" placeholder="MM/AA">
-                    <input type="text" name="names" id="" placeholder="CVV"> 
+                <input type="text" name="names" id="card-number" placeholder="No. de tarjeta" maxlength="19" oninput="formatCardNumber(this)" >
+                <input type="text" name="expiry-date" id="expiry-date" placeholder="MM/AA" maxlength="5" oninput="formatExpiryDate(this)" >
+                <input type="text" name="cvv" id="cvv" placeholder="CVV" maxlength="3" oninput="formatCVV(this)" >
                 </div>
 
             </div>
@@ -144,7 +144,7 @@
     </footer>
 
     <script>
-
+ 
 </script>
 
     <script src="js/modal.js"></script>

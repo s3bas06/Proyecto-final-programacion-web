@@ -57,3 +57,32 @@ document.querySelector('.pay-button').addEventListener('click', function(event) 
 });
 
 
+function formatCardNumber(input) {
+            
+    let value = input.value.replace(/\D/g, '');
+
+    
+    let formattedValue = value.match(/.{1,4}/g)?.join(' ') || '';
+
+   
+    input.value = formattedValue;
+}
+
+function formatExpiryDate(input) {
+    // Elimina caracteres no numéricos
+    let value = input.value.replace(/\D/g, '');
+
+    // Inserta la barra "/" después de los primeros dos números
+    if (value.length > 2) {
+        value = value.slice(0, 2) + '/' + value.slice(2);
+    }
+
+    // Limita el valor a 5 caracteres (MM/AA)
+    input.value = value.slice(0, 5);
+}
+
+// Validación del campo CVV
+function formatCVV(input) {
+    // Elimina caracteres no numéricos y limita a 3 dígitos
+    input.value = input.value.replace(/\D/g, '').slice(0, 3);
+}
