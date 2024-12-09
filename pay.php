@@ -29,9 +29,9 @@
                     <h2 >Datos personales</h2>
                     <br>
                     <div class="personal-data">
-                    <input type="text" name="first-name" placeholder="Nombre(s)" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
-                    <input type="text" name="last-name" placeholder="Apellido paterno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
-                    <input type="text" name="second-last-name" placeholder="Apellido materno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
+                        <input type="text" name="first-name" placeholder="Nombre(s)" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
+                        <input type="text" name="last-name" placeholder="Apellido paterno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, '')" />
+                        <input type="text" name="second-last-name" placeholder="Apellido materno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, '')" />
                     </div>
                     <h2>Método de pago</h2>
                     <br>
@@ -115,8 +115,8 @@
                 <h2>Datos de la persona</h2>
                 <div class="chexkbox-container">
                     <input type="text" name="first-name" placeholder="Nombre(s)" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
-                    <input type="text" name="last-name" placeholder="Apellido paterno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
-                    <input type="text" name="second-last-name" placeholder="Apellido materno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" />
+                    <input type="text" name="last-name" placeholder="Apellido paterno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, '')" />
+                    <input type="text" name="second-last-name" placeholder="Apellido materno" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, '')" />
                 </div>
                 
                 <h2>Datos de la tarjeta</h2>

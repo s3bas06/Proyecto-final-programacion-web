@@ -1,4 +1,33 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+
+    // Verificar si el usuario está logueado
+    if (!isset($_SESSION['usuario_id'])) {
+        header('Location: login.php');
+        exit();
+    }
+
+    // Conectar a la base de datos
+    require 'database.php';
+
+    // Obtener la información del usuario de la base de datos
+    $pdo = (new Database())->getConnection();
+    $query = "SELECT * FROM usuarios WHERE id = :id";
+    $stmt = $pdo->prepare($query);
+    $stmt->bindValue(':id', $_SESSION['usuario_id']);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$user) {
+        echo "Usuario no encontrado.";
+        exit();
+    }
+
+    // Obtener los puntos del usuario
+    $points = $user['points'];
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +58,7 @@
                 <p>Puntos totales:</p>
             </div>
             <div class="total-points">
-                <p>100 puntos</p>
+                <p><?= $points ?></p>
             </div>
             <div class="description">
                 <p>Por cada compra realizada que realiza, al gastar 5 pesos, usted acumula 1 punto en nuestro cine en el cual luego le dara beneficios para un futuro</p>
