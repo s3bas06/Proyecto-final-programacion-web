@@ -16,6 +16,7 @@
         require 'header.php';
         require 'php_codes/functions.php';
         session_start();
+        $orderText = isset($_COOKIE['foodOrder']) ? $_COOKIE['foodOrder'] : 'No has agregado alimentos a tu orden';
     ?>
     
     <main>
@@ -70,7 +71,7 @@
         
             <div class="food-section">
               <h3>Alimentos</h3>
-              <p>No has agregado alimentos a tu orden</p>
+              <p><?= $orderText ?></p>
             </div>
         
             <div class="totals">

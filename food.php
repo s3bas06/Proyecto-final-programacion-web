@@ -85,27 +85,27 @@
                         <div class="food-option">
                             <h3>Bebida 1</h3>
                             <img src="food/fanta.jpg" alt="">
-                            <button class="combo-btn-1" class ="combo-btn-1"><b>Agregar</b></button>
+                            <button class="combo-btn-1" ><b>Agregar</b></button>
                         </div>
                         <div class="food-option">
                             <h3>Bebida 2</h3>
                             <img src="food/pepsi.jpg " alt="">
-                            <button class="combo-btn-1" class ="combo-btn-1"><b>Agregar</b></button>
+                            <button class="combo-btn-1" ><b>Agregar</b></button>
                         </div>
                         <div class="food-option">
                             <h3>Bebida 3</h3>
                             <img src="food/cocacola.jpg" alt="">
-                            <button class="combo-btn-1" class ="combo-btn-1"><b>Agregar</b></button>
+                            <button class="combo-btn-1" ><b>Agregar</b></button>
                         </div>
                         <div class="food-option">
                             <h3>Bebida 4</h3>
                             <img src="food/fantadefresa.jpg" alt="">
-                            <button class="combo-btn-1" class ="combo-btn-1"><b>Agregar</b></button>
+                            <button class="combo-btn-1"><b>Agregar</b></button>
                         </div>
                         <div class="food-option">
                             <h3>Bebida 5</h3>
                             <img src="food/sprite.jpg" alt="">
-                            <button class="combo-btn-1" class ="combo-btn-1"><b>Agregar</b></button>
+                            <button class="combo-btn-1" ><b>Agregar</b></button>
                         </div>
                     </div>
                 </div>
@@ -270,26 +270,22 @@
 
     <script src="js/modal.js"></script>
     <script>
-    // Selecciona todos los botones con la clase .combo-btn
-    const addButtons = document.querySelectorAll('.combo-btn-1');
-    const foodMessage = document.getElementById('food-message'); // Mensaje inicial
-
-    // Iterar sobre todos los botones
+    const addButtons = document.querySelectorAll('.combo-btn-1, .combo-btn');
     addButtons.forEach((button) => {
         button.addEventListener('click', function () {
-            // Obtener el nombre del alimento
             const foodName = this.parentElement.querySelector('h3').textContent;
+            const foodMessage = document.getElementById('food-message');
 
-            // Si el mensaje inicial "No has agregado alimentos" está presente, reemplazarlo
             if (foodMessage.textContent === "No has agregado alimentos a tu orden") {
-                foodMessage.textContent = foodName; // Reemplazar con el primer alimento
+                foodMessage.textContent = foodName;
             } else {
-                // Agregar el nuevo alimento a la derecha, separado por una coma
                 foodMessage.textContent += `, ${foodName}`;
             }
+            document.cookie = `foodOrder=${encodeURIComponent(foodMessage.textContent)}; path=/; max-age=3600;`;
         });
     });
 </script>
+
 
 </body>
 </html>

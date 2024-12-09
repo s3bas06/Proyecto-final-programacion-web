@@ -62,7 +62,7 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Email o contraseña incorrectos.');
+                alert('Email o contraseña incorrectos. 1');
             });
         });
     </script>

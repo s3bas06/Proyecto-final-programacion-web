@@ -164,6 +164,7 @@
         
             <div class="cart-item">
                 <?php
+                
                 echo '<img src="'.searchMovie()['poster_url'].'" alt="Angry Birds" class="movie-poster">';
                 ?>
               
@@ -286,19 +287,23 @@
     <script src="js/modal.js"></script>
 
     <script>
-const addButtons = document.querySelectorAll('.combo-btn-1, .combo-btn');
-addButtons.forEach((button) => {
-    button.addEventListener('click', function () {
-        const foodName = this.parentElement.querySelector('h3').textContent;
-        const foodMessage = document.getElementById('food-message');
+    const addButtons = document.querySelectorAll('.combo-btn-1, .combo-btn');
+    addButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+            const foodName = this.parentElement.querySelector('h3').textContent;
+            const foodMessage = document.getElementById('food-message');
+
+            // Actualizar el contenido de foodMessage
+            if (foodMessage.textContent === "No has agregado alimentos a tu orden") {
+                foodMessage.textContent = foodName;
+            } else {
+                foodMessage.textContent += `, ${foodName}`;
+            }
+
         
-        if (foodMessage.textContent === "No has agregado alimentos a tu orden") {
-            foodMessage.textContent = foodName;
-        } else {
-            foodMessage.textContent += `, ${foodName}`;
-        }
+            document.cookie = `foodOrder=${encodeURIComponent(foodMessage.textContent)}; path=/; max-age=3600;`;
+        });
     });
-});
 </script>
 
 </body>

@@ -64,10 +64,15 @@ if (!$user) {
             </div>
         </div>     
     </div>
+
+    <form action="php_codes/logout.php">
+    <button>Cerrar sesion</button>
+    </form>
+
     <div class="return">
         <a href="inicio.php"><p>volver</p></a>
     </div>
 
-    <?php require 'footer_profile.php'; ?>
+    <?php require 'footer.php'; ?>
 </body>
 </html>
