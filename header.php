@@ -15,7 +15,6 @@
         <div class="header-options">
             <a href="inicio.php#movies"><div class="header-option">Peliculas</div></a>
             <a href="food-index.php"><div class="header-option">Alimentos</div></a>
-            <a href=""><div class="header-option">Promos</div></a>
         </div>
         <div class="user-icon">
             <a href="profile.php"><img src="assets/user-icon.png" alt=""></a>
