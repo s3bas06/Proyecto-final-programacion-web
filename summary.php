@@ -83,7 +83,7 @@
                 echo '<p class="grand-total">Total: <span>$'.$total_cart.'.00</span></p>';
             ?>
             </div>
-            <form action="php_codes/goIndex.php">
+            <form action="php_codes/afterBuy.php">
             <button class="pay-button">Confirmar</button>
             </form>
         </div>
