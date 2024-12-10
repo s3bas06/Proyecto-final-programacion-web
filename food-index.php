@@ -103,7 +103,7 @@
                     <div class="food-option">
                         <h3>Bebida 1</h3>
                         <img src="food/fanta.jpg" alt="">
-                        <button class="combo-btn"><b>Agregar</b></button>
+                        <button class="combo-btn-1"><b>Agregar</b></button>
                     </div>
                     <div class="food-option">
                         <h3>Bebida 2</h3>
@@ -153,42 +153,8 @@
         <div class="cart-container">
             <header class="cart-header">
               <h1>Tu carrito</h1>
-              <?php
-              $price = ($_SESSION['adult_tickets'] * 75) + ($_SESSION['children_tickets'] * 50);
-              $_SESSION['subtotal'] = $price;
-              $service = 8;
-              $total_cart = $service + $_SESSION['subtotal'];
-              echo '<span class="cart-total">$'.$total_cart.'.00</span>';
-              ?>
+              <span class="cart-total">$8.00</span>
             </header>
-        
-            <div class="cart-item">
-                <?php
-                
-                echo '<img src="'.searchMovie()['poster_url'].'" alt="Angry Birds" class="movie-poster">';
-                ?>
-              
-              
-              <div class="movie-info">
-                <h2><?php echo searchMovie()['titulo'] ?></h2>
-                <p><strong>Clasificación:</strong> <?php echo searchMovie()['clasificacion'] ?></p>
-                <p><strong>Duración:</strong> <?php echo searchMovie()['duracion'] ?> min</p>
-              </div>
-            </div>
-            
-            <div class="cart-details">
-              <h3>Cine seleccionado</h3>
-              <p>Fecha y hora</p>
-              <?php cartDate();?>
-              <?php
-                echo '<p><strong>Asientos:</strong><br>Adulto ('.$_SESSION['adult_tickets'].')<br> Niños ('.$_SESSION['children_tickets'].')</p>';
-                
-                $price = ($_SESSION['adult_tickets'] * 75) + ($_SESSION['children_tickets'] * 50);
-                
-                echo '<p class="price">$'.$price.'.00</p>';
-                
-              ?>
-            </div>
         
             <div class="food-section">
               <h3>Alimentos</h3>
@@ -196,15 +162,11 @@
             </div>
         
             <div class="totals">
-            <?php
-                echo '<p>Subtotal: <span>$'.$_SESSION['subtotal'].'.00</span></p>';
-                $service = 8;
-                $total_cart = $service + $_SESSION['subtotal'];
-                echo '<p>Cargo por servicio: <span>$'.$service.'.00</span></p>';
-                echo '<p class="grand-total">Total: <span>$'.$total_cart.'.00</span></p>';
-            ?>
+                <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                <p>Cargo por servicio: <span>$8.00</span></p>
+                <p class="grand-total">Total: <span id="total">$8.00</span></p>
             </div>
-            <form action="php_codes/goPay.php">
+            <form action="php_codes/goPayFood.php">
             <button class="pay-button">Siguiente</button>
             </form>
         </div>
@@ -282,7 +244,9 @@
     ?>
 
     <footer class="show-cart">
-        <input type="button" value="Proceder al pago">
+        <a href="payFood.php">
+        <input type="button" value="Siguiente">
+        </a>
     </footer>
     <script src="js/modal.js"></script>
 
@@ -292,16 +256,31 @@
         button.addEventListener('click', function () {
             const foodName = this.parentElement.querySelector('h3').textContent;
             const foodMessage = document.getElementById('food-message');
+            const subtotal = document.getElementById('subtotal');
+            const total = document.querySelector('#total');
+            const bigTotal = document.querySelector('.cart-total');
+            const showCart = document.querySelector('.show-cart');
 
-            // Actualizar el contenido de foodMessage
             if (foodMessage.textContent === "No has agregado alimentos a tu orden") {
                 foodMessage.textContent = foodName;
             } else {
                 foodMessage.textContent += `, ${foodName}`;
             }
 
-        
+            let subtotalActual = parseFloat(subtotal.textContent.replace('$', '')) || 0; // Eliminar '$' antes de convertir
+            subtotalActual += 14;
+            subtotal.textContent = '$' + subtotalActual.toFixed(2);
+
+            total.textContent = '$' + (subtotalActual + 8).toFixed(2);
+            bigTotal.textContent = total.textContent;
+
             document.cookie = `foodOrder=${encodeURIComponent(foodMessage.textContent)}; path=/; max-age=3600;`;
+            document.cookie = `total=${encodeURIComponent(total.textContent)}; path=/; max-age=3600`
+            document.cookie = `subtotal=${encodeURIComponent(subtotal.textContent)}; path=/; max-age=3600`
+
+            if(window.innerWidth < 768){
+            showCart.style.opacity = "1";
+            }
         });
     });
 </script>
