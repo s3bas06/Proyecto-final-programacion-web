@@ -251,9 +251,12 @@
     <script src="js/modal.js"></script>
 
     <script>
+    const payButton = document.querySelector('.pay-button');
+    payButton.disabled = true;
     const addButtons = document.querySelectorAll('.combo-btn-1, .combo-btn');
     addButtons.forEach((button) => {
         button.addEventListener('click', function () {
+            payButton.disabled = false;
             const foodName = this.parentElement.querySelector('h3').textContent;
             const foodMessage = document.getElementById('food-message');
             const subtotal = document.getElementById('subtotal');
