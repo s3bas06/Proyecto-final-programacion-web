@@ -64,7 +64,7 @@
                 <p><?= $points ?></p>
             </div>
             <div class="description">
-                <p>Por cada compra realizada que realiza, al gastar 5 pesos, usted acumula 1 punto en nuestro cine en el cual luego le dara beneficios para un futuro</p>
+                <p>Por cada compra realizada que realiza, usted acumula 1 punto en nuestro cine en el cual luego le dara beneficios para un futuro</p>
             </div>
         </div> 
 

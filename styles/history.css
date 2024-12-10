@@ -97,10 +97,10 @@ p{
     **********************************/
 
     .return {
-        margin-top: 3%;
-        display: flex; /* Activa Flexbox */
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
+        
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
         
     }
     

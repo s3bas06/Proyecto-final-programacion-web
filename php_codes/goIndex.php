@@ -1,42 +1,54 @@
 <?php
-    session_start();
+session_start();
 
-    // Verificar si el usuario está logueado
-    if (!isset($_SESSION['usuario_id'])) {
-        header('Location: login.php');
-        exit();
-    }
+// Verificar si el usuario está logueado
+if (!isset($_SESSION['usuario_id'])) {
+    // Eliminar cookie y redirigir
+    setcookie("foodOrder", "", time() - 3600, "/");
+    header('Location: ../inicio.php');
+    exit();
+}
 
-    // Conectar a la base de datos
-    require 'database.php';
+// Conectar a la base de datos
+require 'database.php';
 
-    // Obtener la información del usuario de la base de datos
+try {
     $pdo = (new Database())->getConnection();
-    $query = "SELECT * FROM usuarios WHERE id = :id"; // Cambiar UPDATE por SELECT
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Obtener la información del usuario
+    $query = "SELECT * FROM usuarios WHERE id = :id";
     $stmt = $pdo->prepare($query);
     $stmt->bindValue(':id', $_SESSION['usuario_id'], PDO::PARAM_INT);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if (!$user) {
-        echo "Usuario no encontrado.";
-        exit();
+        die('Usuario no encontrado.');
     }
 
-    // Obtener los puntos actuales y sumar
-    $points = $user['points']; // Asegurarte de que la columna se llame 'points'
+    // Obtener y actualizar los puntos
+    $points = $user['points'];
     $pointsTotal = 1;
     $newPoints = $points + $pointsTotal;
 
-    // Actualizar los puntos en la base de datos
-    $query2 = "UPDATE usuarios SET points = :newPoints WHERE id = :id"; // Corregir columna 'points'
+    $query2 = "UPDATE usuarios SET points = :newPoints WHERE id = :id";
     $stmt2 = $pdo->prepare($query2);
     $stmt2->bindValue(':newPoints', $newPoints, PDO::PARAM_INT);
     $stmt2->bindValue(':id', $_SESSION['usuario_id'], PDO::PARAM_INT);
     $stmt2->execute();
 
-    // Eliminar cookie y redirigir
-    setcookie("foodOrder", "", time() - 3600, "/");
-    header('Location: ../inicio.php');
-    exit();
+    if ($stmt2->rowCount() === 0) {
+        die('No se actualizó ningún registro.');
+    }
+
+    echo "Puntos actualizados correctamente.";
+} catch (PDOException $e) {
+    die('Error en la base de datos: ' . $e->getMessage());
+}
+
+// Eliminar cookie y redirigir
+setcookie("foodOrder", "", time() - 3600, "/");
+header('Location: ../inicio.php');
+exit();
 ?>

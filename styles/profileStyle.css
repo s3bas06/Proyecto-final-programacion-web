@@ -11,11 +11,11 @@ body{
 
 body {
     overflow-x: scroll;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; 
 }
 
 body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none; 
 }
 
 h1 {
@@ -44,6 +44,7 @@ p{
 
     **********************************/
     .dates{
+        text-align: center;
         margin-top: 0.3em;
         display: flex;
         padding-inline: 11em;
@@ -92,7 +93,7 @@ p{
 
     .menu-options{
         display: flex;
-        flex-direction: column; /* Coloca los elementos en columna */
+        flex-direction: column; 
         gap: 1rem;
         padding: 2rem;
         font-size: 2rem;
@@ -103,23 +104,23 @@ p{
     }
 
     .btn-logout {
-        background-color: #ff4d4d; /* Rojo */
-        color: #ffffff; /* Letras blancas */
-        border: none; /* Sin bordes */
-        border-radius: 15px; /* Borde curveado */
-        padding: 10px 20px; /* Espaciado interno */
-        font-size: 16px; /* Tamaño de letra */
-        font-weight: bold; /* Letras en negrita */
-        cursor: pointer; /* Manita al pasar el mouse */
-        transition: background-color 0.3s ease; /* Efecto de transición */
+        background-color: #ff4d4d; 
+        color: #ffffff; 
+        border: none; 
+        border-radius: 15px; 
+        padding: 10px 20px; 
+        font-size: 16px; 
+        font-weight: bold;
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
       }
     
       .btn-logout:hover {
-        background-color: #e60000; /* Rojo más oscuro al pasar el mouse */
+        background-color: #e60000;
       }
     
       .btn-logout:active {
-        background-color: #cc0000; /* Rojo aún más oscuro al hacer clic */
+        background-color: #cc0000; 
       }
     /**********************************
 
@@ -127,10 +128,10 @@ p{
 
     **********************************/
     .return {
-        margin-top: 3%;
-        display: flex; /* Activa Flexbox */
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
+       
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
         
     }
     
@@ -150,7 +151,7 @@ p{
     }
     
     .return a:hover {
-        transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+        transform: scale(1.05); 
     }
 }
 
