@@ -82,9 +82,8 @@ function submitDay(day) {
     }
 
     setTimeout(function() {
-        document.forms[0].submit(); // Esto enviará el formulario y recargará la página
-    }, 10); // Espera 500ms antes de hacer el submit
-
+        document.forms[0].submit();
+    }, 10);
 }
 
 </script>

@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['children_tickets'] = (int)$_POST['children-tickets'];
     }
 
-    if((isset($_POST['children-tickets']) || isset($_POST['adult-tickets'])) && isset($_POST['cine-selection'])){
+    if((isset($_POST['children-tickets']) || isset($_POST['adult-tickets']))){
         header('Location:..//seats.php');
     } else {
         $day = $_POST['selected_day'];

@@ -32,26 +32,52 @@
 
         <div class="display-option"></div>
     </main>
-
+    
     <div class="cine-selection" id="movies">
         <label class="cine-title">Descubre tu cartelera en tu cine</label>
-        <select name="cine-selector" id="cine-selector">
-            <option value="cine1">Cine 1</option>
-            <option value="cine2">Cine 2</option>
-            <option value="cine3">Cine 3</option>
-            <option value="cine4">Cine 4</option>
-        </select>
+            <select name="cine-selector" id="cine-selector">
+                <option value="1">Cine 1</option>
+                <option value="2">Cine 2</option>
+                <option value="3">Cine 3</option>
+                <option value="4">Cine 4</option>
+            </select>
     </div>
 
-    <div class="movie-listings">
-        <?php
-            require 'php_codes/functions.php';
-            getMoviesIndex();
-        ?>
+    <div class="movie-listings" id="movie-listings">
+
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cineSelector = document.getElementById("cine-selector");
+            const movieListings = document.querySelector(".movie-listings");
+
+            // Función para cargar las películas de un cine específico
+            function loadMovies(cineId) {
+                fetch("php_codes/get_movies.php", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: "cine_id=" + cineId,
+                })
+                    .then((response) => response.text())
+                    .then((data) => {
+                        movieListings.innerHTML = data; // Mostrar las películas
+                    })
+                    .catch((error) => console.error("Error al cargar las películas:", error));
+            }
+
+            // Cargar las películas del cine 1 al inicio
+            loadMovies(1);
+
+            // Cambiar las películas cuando el usuario seleccione otro cine
+            cineSelector.addEventListener("change", function () {
+                loadMovies(this.value);
+            });
+        });
+    </script>
 
     <?php
         require 'footer.php';
-    ?>
+    ?> 
 </body>
 </html>

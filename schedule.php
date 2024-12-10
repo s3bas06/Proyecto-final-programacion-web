@@ -38,18 +38,18 @@
             <form method="POST" action="php_codes/changeDate.php">
             <div class="main-function">
                 <div class="selectors" id="interface">
-                    <select name="cine-selection" id="comboBox" class="first-combobox">
-                        <option value="cine1">Cine 1</option>
-                        <option value="cine2">Cine 2</option>
-                        <option value="cine3">Cine 3</option>
-                        <option value="cine4">Cine 4</option>
-                    </select>
                     <select name="adult-tickets" id="comboBox" class="ticket">
                         <option value="" disabled selected>Boletos adulto</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
                     </select>
                     <select name="children-tickets" id="comboBox" class="ticket">
                         <option value="" disabled selected>Boletos niño</option>
@@ -57,6 +57,12 @@
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
                     </select>
                 </div>
         <?php require 'php_codes/scheduleGenerator.php'; ?>
